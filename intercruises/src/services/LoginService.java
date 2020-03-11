@@ -12,6 +12,7 @@ import com.google.gson.Gson;
 
 public class LoginService {
 
+<<<<<<< HEAD
 	String url = "http://localhost:3000/login";
 
 	public void checkCreds(String username, String password) {
@@ -54,4 +55,7 @@ public class LoginService {
 
 	}
 
+=======
+	
+>>>>>>> 6efc15bf74e122605cfb3201d0e43442618b6e92
 }
