@@ -10,52 +10,72 @@ import java.util.HashMap;
 
 import com.google.gson.Gson;
 
+import models.User;
+
 public class LoginService {
 
-<<<<<<< HEAD
 	String url = "http://localhost:3000/login";
 
 	public void checkCreds(String username, String password) {
-		HashMap<String, String> mapa = new HashMap<String, String>();
-		mapa.put("username", username);
-		mapa.put("password", password);
-
+		User user = new User(username,password);
+		
+		String body = new Gson().toJson(user);
+		
 		HttpURLConnection conn = null;
 
 		try {
 			conn = (HttpURLConnection) new URL(url).openConnection();
 
-			conn.setRequestMethod("GET");
-			conn.setRequestProperty("Content-Type", "application/json; utf-8");
+			conn.setRequestMethod("POST");
 			conn.setRequestProperty("Accept", "application/json");
+			conn.setRequestProperty("Content-Type", "application/json");
 			conn.setDoOutput(true);
-
-			String body = new Gson().toJson(mapa);
 
 			System.out.println(body);
 
-			try (OutputStream os = conn.getOutputStream()) {
-				byte[] input = body.getBytes("utf-8");
-				os.write(input, 0, input.length);
-			}
+			enviarBody(conn, body);
 
-			try (BufferedReader br = new BufferedReader(new InputStreamReader(conn.getInputStream(), "utf-8"))) {
-				StringBuilder response = new StringBuilder();
-				String responseLine = null;
-				while ((responseLine = br.readLine()) != null) {
-					response.append(responseLine.trim());
-				}
-				System.out.println(response.toString());
-			}
-			
+			System.out.println(conn.getResponseMessage());
+
+			System.out.println(formatearRespuesta(conn));
+
 			conn.disconnect();
 		} catch (IOException e) {
 			System.out.println("IOException-LoginService.checkCreds: " + e.getMessage());
+			e.printStackTrace();
 		}
 
 	}
 
-=======
-	
->>>>>>> 6efc15bf74e122605cfb3201d0e43442618b6e92
+	void enviarBody(HttpURLConnection conn, String body) {
+		try {
+			OutputStream os = conn.getOutputStream();
+			byte[] input = body.getBytes("utf-8");
+			os.write(input, 0, input.length);
+			os.close();
+		} catch (IOException e) {
+			System.out.println("IOException-LoginService.enviarBody " + e.getMessage());
+			e.printStackTrace();
+		}
+	}
+
+	String formatearRespuesta(HttpURLConnection conn) {
+		StringBuilder sb = new StringBuilder();
+
+		try {
+			BufferedReader br = new BufferedReader(new InputStreamReader((conn.getInputStream())));
+			String output;
+			while ((output = br.readLine()) != null)
+				sb.append(output);
+
+			br.close();
+			return sb.toString();
+		} catch (IOException e) {
+			System.out.println("IOException-LoginService.formatearRespuesta: " + e.getMessage());
+			e.printStackTrace();
+			return null;
+		}
+
+	}
+
 }
