@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane fx:id="mainAP" minHeight="150.0" minWidth="1803.0" onMouseEntered="#chivato" style="-fx-background-color: #661522;" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controllers.EventCellController">
+   <children>
+      <ImageView fx:id="userIcon" fitHeight="136.0" fitWidth="163.0" layoutX="14.0" layoutY="7.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../img/profile_girl_icon.png" />
+         </image>
+      </ImageView>
+      <Label fx:id="location" layoutX="180.0" layoutY="41.0" prefHeight="70.0" prefWidth="278.0" text="location" textFill="WHITE">
+         <font>
+            <Font name="Consolas" size="53.0" />
+         </font>
+      </Label>
+      <Label fx:id="description" layoutX="467.0" layoutY="23.0" prefHeight="106.0" prefWidth="1018.0" text="Descpripcion" textFill="WHITE">
+         <font>
+            <Font name="Consolas" size="18.0" />
+         </font>
+      </Label>
+      <ImageView fx:id="editIcon" fitHeight="113.0" fitWidth="117.0" layoutX="1672.0" layoutY="19.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../img/edit_icon.png" />
+         </image>
+      </ImageView>
+      <Label fx:id="activa" layoutX="1524.0" layoutY="19.0" prefHeight="30.0" prefWidth="87.0" text="Activa" textFill="WHITE">
+         <font>
+            <Font name="Consolas" size="25.0" />
+         </font>
+      </Label>
+      <ImageView fx:id="activaIcon" fitHeight="88.0" fitWidth="106.0" layoutX="1534.0" layoutY="49.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../img/check_icon.png" />
+         </image>
+      </ImageView>
+   </children>
+</AnchorPane>

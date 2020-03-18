@@ -8,14 +8,24 @@ import javafx.scene.Scene;
 
 
 public class Main extends Application {
+	
+	public static Stage stage;
+	
 	@Override
 	public void start(Stage primaryStage) {
 		try {
-			Parent root = FXMLLoader.load(getClass().getResource("../views/Login.fxml"));
-			Scene scene = new Scene(root, 1024, 768);
+//			Parent root = FXMLLoader.load(getClass().getResource("../views/Login.fxml"));
+//			Parent root = FXMLLoader.load(getClass().getResource("../views/MainFrame.fxml"));
+//			Parent root = FXMLLoader.load(getClass().getResource("../views/NewsFeedMenu.fxml"));
+			Parent root = FXMLLoader.load(getClass().getResource("../views/NewsFeedList.fxml"));
+			
+			stage = primaryStage;
+			
+			System.out.println(getClass().getResource("../views/MainFrame.fxml"));
+			Scene scene = new Scene(root, 1920, 1080);
 			scene.getStylesheets().add(getClass().getResource("application.css").toExternalForm());
-			primaryStage.setScene(scene);
-			primaryStage.show();
+			stage.setScene(scene);
+			stage.show();
 		} catch(Exception e) {
 			e.printStackTrace();
 		}
