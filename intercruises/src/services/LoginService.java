@@ -6,14 +6,14 @@ import java.net.URL;
 
 import com.google.gson.Gson;
 
-import models.User;
+import models.LoginUser;
 
 public class LoginService {
 
 	String url = "http://localhost:3000/login";
 
 	public String checkCreds(String username, String password) {
-		User user = new User(username,password);
+		LoginUser user = new LoginUser(username,password);
 		
 		String body = new Gson().toJson(user);
 		

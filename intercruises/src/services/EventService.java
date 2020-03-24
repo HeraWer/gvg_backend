@@ -4,12 +4,10 @@ import java.io.IOException;
 import java.net.HttpURLConnection;
 import java.net.URL;
 import java.util.ArrayList;
-import java.util.HashMap;
 
 import com.google.gson.Gson;
 import com.google.gson.JsonElement;
 import com.google.gson.JsonParser;
-import com.google.gson.JsonStreamParser;
 
 import models.Event;
 
@@ -49,7 +47,7 @@ public class EventService {
 		
 		for (JsonElement x : JsonParser.parseString(response).getAsJsonArray())
 			arr.add(gson.fromJson(x, Event.class));
-
+		
 		System.out.println("respone: " + response);
 		System.out.println(arr.toString());
 
