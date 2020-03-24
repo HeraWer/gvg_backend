@@ -8,9 +8,9 @@
 <?import javafx.scene.layout.GridPane?>
 <?import javafx.scene.layout.RowConstraints?>
 
-<AnchorPane minHeight="1080.0" minWidth="1920.0" prefHeight="666.0" prefWidth="848.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controllers.MainFrameController">
+<AnchorPane minHeight="1080.0" minWidth="1920.0" prefHeight="666.0" prefWidth="848.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controllers.MainFrameController">
    <children>
-      <BorderPane fx:id="borderPane" minHeight="1080.0" minWidth="1920.0" onMouseEntered="#chivato" prefHeight="1080.0" prefWidth="1920.0">
+      <BorderPane fx:id="bp" minHeight="1080.0" minWidth="1920.0" onMouseEntered="#chivato" prefHeight="1080.0" prefWidth="1920.0">
          <left>
             <GridPane prefHeight="1080.0" prefWidth="123.0" style="-fx-background-color: #2e1e47;" BorderPane.alignment="CENTER">
                <columnConstraints>

@@ -27,14 +27,14 @@ public class NewsFeedListControler implements Initializable {
 //		ol = FXCollections.observableArrayList();
 		
 		//Forma grafica de ver la lista
-//		listView.setCellFactory(new Callback<ListView<Event>, ListCell<Event>>() {
-//			
-//			@Override
-//			public ListCell<Event> call(ListView<Event> param) {
-//				// TODO Auto-generated method stub
-//				return new EventCellController();
-//			}
-//		});
+		listView.setCellFactory(new Callback<ListView<Event>, ListCell<Event>>() {
+			
+			@Override
+			public ListCell<Event> call(ListView<Event> param) {
+				// TODO Auto-generated method stub
+				return new EventCellController();
+			}
+		});
 		
 //		Event e = new Event();
 //		
