@@ -16,56 +16,56 @@
             <Font name="Consolas" size="64.0" />
          </font>
       </Label>
-      <Button layoutX="491.0" layoutY="755.0" mnemonicParsing="false" onAction="#crear" prefHeight="90.0" prefWidth="420.0" style="-fx-background-color: GREEN;" text="Crear" textFill="WHITE">
+      <Button layoutX="922.0" layoutY="773.0" mnemonicParsing="false" onAction="#crear" prefHeight="90.0" prefWidth="420.0" style="-fx-background-color: GREEN;" text="Crear" textFill="WHITE">
          <font>
             <Font name="Consolas" size="41.0" />
          </font></Button>
-      <Pane layoutX="29.0" layoutY="134.0" prefHeight="855.0" prefWidth="427.0" style="-fx-background-color: #0e9bf9;">
+      <Pane layoutX="460.0" layoutY="152.0" prefHeight="784.0" prefWidth="427.0" style="-fx-background-color: #0e9bf9;">
          <children>
-            <Label alignment="CENTER" layoutX="13.0" prefHeight="57.0" prefWidth="401.0" text="Información personal" textFill="WHITE">
+            <Label alignment="CENTER" layoutX="13.0" layoutY="14.0" prefHeight="57.0" prefWidth="401.0" text="Información personal" textFill="WHITE">
                <font>
                   <Font name="Consolas Bold" size="35.0" />
                </font>
             </Label>
+            <Label layoutX="13.0" layoutY="653.0" prefHeight="39.0" prefWidth="294.0" text="Direccion:">
+               <font>
+                  <Font name="Consolas" size="35.0" />
+               </font>
+            </Label>
+            <Label layoutX="14.0" layoutY="71.0" prefHeight="39.0" prefWidth="294.0" text="Nombre:">
+               <font>
+                  <Font name="Consolas" size="35.0" />
+               </font>
+            </Label>
+            <TextField fx:id="tfApellidos" layoutX="13.0" layoutY="228.0" prefHeight="75.0" prefWidth="401.0" />
+            <Label layoutX="14.0" layoutY="187.0" prefHeight="39.0" prefWidth="294.0" text="Apellidos:">
+               <font>
+                  <Font name="Consolas" size="35.0" />
+               </font>
+            </Label>
+            <Label layoutX="13.0" layoutY="421.0" prefHeight="39.0" prefWidth="294.0" text="DNI:">
+               <font>
+                  <Font name="Consolas" size="35.0" />
+               </font>
+            </Label>
+            <Label layoutX="13.0" layoutY="303.0" prefHeight="39.0" prefWidth="294.0" text="Nacimiento:">
+               <font>
+                  <Font name="Consolas" size="35.0" />
+               </font>
+            </Label>
+            <Label layoutX="13.0" layoutY="537.0" prefHeight="39.0" prefWidth="294.0" text="Ciudad:">
+               <font>
+                  <Font name="Consolas" size="35.0" />
+               </font>
+            </Label>
+            <TextField fx:id="tfNombre" layoutX="13.0" layoutY="112.0" prefHeight="75.0" prefWidth="401.0" />
+            <TextField fx:id="tfDNI" layoutX="13.0" layoutY="462.0" prefHeight="75.0" prefWidth="401.0" />
+            <TextField fx:id="tfCiudad" layoutX="13.0" layoutY="578.0" prefHeight="75.0" prefWidth="401.0" />
+            <TextField fx:id="tfNacimiento" layoutX="13.0" layoutY="344.0" prefHeight="75.0" prefWidth="401.0" />
+            <TextField fx:id="tfDireccion" layoutX="13.0" layoutY="694.0" prefHeight="75.0" prefWidth="401.0" />
          </children>
       </Pane>
-      <Label layoutX="42.0" layoutY="826.0" prefHeight="39.0" prefWidth="294.0" text="Direccion:">
-         <font>
-            <Font name="Consolas" size="35.0" />
-         </font>
-      </Label>
-      <Label layoutX="42.0" layoutY="177.0" prefHeight="39.0" prefWidth="294.0" text="Nombre:">
-         <font>
-            <Font name="Consolas" size="35.0" />
-         </font>
-      </Label>
-      <TextField fx:id="tfApellidos" layoutX="42.0" layoutY="350.0" prefHeight="75.0" prefWidth="401.0" />
-      <Label layoutX="42.0" layoutY="303.0" prefHeight="39.0" prefWidth="294.0" text="Apellidos:">
-         <font>
-            <Font name="Consolas" size="35.0" />
-         </font>
-      </Label>
-      <Label layoutX="42.0" layoutY="561.0" prefHeight="39.0" prefWidth="294.0" text="DNI:">
-         <font>
-            <Font name="Consolas" size="35.0" />
-         </font>
-      </Label>
-      <Label layoutX="42.0" layoutY="429.0" prefHeight="39.0" prefWidth="294.0" text="Nacimiento:">
-         <font>
-            <Font name="Consolas" size="35.0" />
-         </font>
-      </Label>
-      <Label layoutX="38.0" layoutY="690.0" prefHeight="39.0" prefWidth="294.0" text="Ciudad:">
-         <font>
-            <Font name="Consolas" size="35.0" />
-         </font>
-      </Label>
-      <TextField fx:id="tfNombre" layoutX="42.0" layoutY="222.0" prefHeight="75.0" prefWidth="401.0" />
-      <TextField fx:id="tfDNI" layoutX="38.0" layoutY="604.0" prefHeight="75.0" prefWidth="401.0" />
-      <TextField fx:id="tfCiudad" layoutX="38.0" layoutY="735.0" prefHeight="75.0" prefWidth="401.0" />
-      <TextField fx:id="tfNacimiento" layoutX="38.0" layoutY="480.0" prefHeight="75.0" prefWidth="401.0" />
-      <TextField fx:id="tfDireccion" layoutX="42.0" layoutY="874.0" prefHeight="75.0" prefWidth="401.0" />
-      <Pane layoutX="491.0" layoutY="134.0" prefHeight="598.0" prefWidth="420.0" style="-fx-background-color: #0ef9ee;">
+      <Pane layoutX="922.0" layoutY="152.0" prefHeight="598.0" prefWidth="420.0" style="-fx-background-color: #0ef9ee;">
          <children>
             <ComboBox fx:id="roles" layoutX="10.0" layoutY="118.0" prefHeight="75.0" prefWidth="401.0" />
             <Label layoutX="10.0" layoutY="73.0" prefHeight="39.0" prefWidth="294.0" text="Rol:">
