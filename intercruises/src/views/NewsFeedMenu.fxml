@@ -7,7 +7,7 @@
 <?import javafx.scene.layout.Pane?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane fx:id="mainAP" prefHeight="1080.0" prefWidth="1803.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controllers.NewsFeedMenuController">
+<AnchorPane fx:id="mainAP" prefHeight="1080.0" prefWidth="1920.0" style="-fx-background-color: #1f202e;" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controllers.NewsFeedMenuController">
    <children>
       <Pane fx:id="searchPane" layoutX="689.0" layoutY="366.0" onMouseClicked="#abrirNewsFeedList" prefHeight="118.0" prefWidth="425.0" style="-fx-background-color: grey;">
          <children>

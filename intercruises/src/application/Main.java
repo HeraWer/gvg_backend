@@ -25,10 +25,11 @@ public class Main extends Application {
 
 			stage = primaryStage;
 			
-			System.out.println(getClass().getResource("NewUserForm.fxml"));
 			Scene scene = new Scene(root, 1920, 1080);
 			scene.getStylesheets().add(getClass().getResource("application.css").toExternalForm());
 			stage.setScene(scene);
+			stage.setMaximized(true);
+			stage.setResizable(false);
 			stage.show();
 		} catch(Exception e) {
 			e.printStackTrace();

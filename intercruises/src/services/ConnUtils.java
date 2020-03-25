@@ -15,7 +15,7 @@ public class ConnUtils {
 			os.write(input, 0, input.length);
 			os.close();
 		} catch (IOException e) {
-			System.out.println("IOException-LoginService.enviarBody " + e.getMessage());
+			System.out.println("IOException-ConnUtils.enviarBody " + e.getMessage());
 			e.printStackTrace();
 		}
 	}
@@ -33,7 +33,7 @@ public class ConnUtils {
 			br.close();
 			return sb.toString();
 		} catch (IOException e) {
-			System.out.println("IOException-LoginService.formatearRespuesta: " + e.getMessage());
+			System.out.println("IOException-ConnUtils.formatearRespuesta: " + e.getMessage());
 			e.printStackTrace();
 			return null;
 		}

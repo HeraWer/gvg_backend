@@ -6,14 +6,14 @@ import java.net.URL;
 
 import com.google.gson.Gson;
 
-import models.LoginUser;
+import models.UpdateUser;
 
-public class LoginService {
+public class ManageUsersService {
 
-	String url = "http://localhost:3000/login";
+	String url = "http://localhost:3000/updateUser";
 
-	public String checkCreds(String username, String password) {
-		LoginUser user = new LoginUser(username,password);
+	public String checkCreds(String oldUsername, String newUsername, String newPassword) {
+		UpdateUser user = new UpdateUser(oldUsername, newUsername, newPassword);
 		
 		String body = new Gson().toJson(user);
 		
@@ -46,5 +46,4 @@ public class LoginService {
 		}
 
 	}
-
 }
