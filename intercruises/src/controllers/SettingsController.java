@@ -8,7 +8,7 @@ import javafx.application.Application;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.fxml.Initializable;
-import javafx.scene.Scene;
+import javafx.scene.Parent;
 import javafx.scene.control.Button;
 import javafx.stage.Stage;
 
@@ -22,9 +22,9 @@ public class SettingsController extends Application implements Initializable {
 	@FXML
 	void openManageUsers() {
 		try {
-			Scene settingsScene = new Scene(FXMLLoader.load(getClass().getResource("../views/ManageUsers.fxml")));
-			settingsScene.getStylesheets().add("/application/application.css");
-			mfc.bp.setCenter(settingsScene.getRoot());
+			Parent settingsScene = FXMLLoader.load(getClass().getResource("../views/ManageUsers.fxml"));
+			settingsScene.getStylesheets().add(getClass().getResource("../application/application.css").toExternalForm());
+			mfc.bp.setCenter(settingsScene);
 
 		} catch (IOException e) {
 			// TODO Auto-generated catch block

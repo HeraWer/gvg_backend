@@ -1,6 +1,5 @@
 package controllers;
 
-import java.io.File;
 import java.io.IOException;
 import java.net.URL;
 import java.util.ResourceBundle;
@@ -8,7 +7,7 @@ import java.util.ResourceBundle;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.fxml.Initializable;
-import javafx.scene.Scene;
+import javafx.scene.Parent;
 import javafx.scene.image.ImageView;
 import javafx.scene.layout.BorderPane;
 import javafx.scene.layout.GridPane;
@@ -29,51 +28,36 @@ public class MainFrameController implements Initializable {
 
 	@FXML
 	public BorderPane bp;
-	
+
 	@FXML
 	private GridPane gridPane;
-	
+
 	@FXML
 	void abrirNewsFeed() {
 		try {
-			System.out.println(getClass().getResource("../views/NewsFeedMenu.fxml"));
-			File f = new File("bin/views/NewsFeedMenu.fxml");
-			System.out.println(f.exists());
-			URL url = new URL("file:/"+f.getAbsolutePath());
-			
-			System.out.println(url);
-
-			Scene newsFeedScene = new Scene(FXMLLoader.load(getClass().getResource("../views/NewsFeedMenu.fxml")));
-			bp.setCenter(newsFeedScene.getRoot());
-			
+			Parent newsFeedScene = FXMLLoader.load(getClass().getResource("../views/NewsFeedMenu.fxml"));
+			bp.setCenter(newsFeedScene);
 		} catch (IOException e) {
 			// TODO Auto-generated catch block
 			System.out.println("MainFrameController.abrirNewsFeed - IOException: " + e.getMessage());
 			e.printStackTrace();
 		}
-		
+
 	}
-	
+
 	@FXML
 	void openSettings() {
 		try {
-			System.out.println(getClass().getResource("../views/Settings.fxml"));
-			File f = new File("bin/views/Settings.fxml");
-			System.out.println(f.exists());
-			URL url = new URL("file:/"+f.getAbsolutePath());
-			
-			System.out.println(url);
-
-			Scene settingsScene = new Scene(FXMLLoader.load(getClass().getResource("../views/Settings.fxml")));
-			bp.setCenter(settingsScene.getRoot());
-			
+			Parent settingsScene = FXMLLoader.load(getClass().getResource("../views/Settings.fxml"));
+			settingsScene.getStylesheets().add(getClass().getResource("../application/application.css").toExternalForm());
+			bp.setCenter(settingsScene);
 		} catch (IOException e) {
 			// TODO Auto-generated catch block
 			System.out.println("MainFrameController.openSettings - IOException: " + e.getMessage());
 			e.printStackTrace();
 		}
 	}
-	
+
 	@FXML
 	void chivato() {
 		System.out.println("chivato MainFrameContorller");
@@ -86,5 +70,5 @@ public class MainFrameController implements Initializable {
 		NewsFeedMenuController.mfc = this;
 		SettingsController.mfc = this;
 	}
-	
+
 }

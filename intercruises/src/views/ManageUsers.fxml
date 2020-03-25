@@ -9,7 +9,7 @@
 
 <AnchorPane prefHeight="1080.0" prefWidth="1920.0" style="-fx-background-color: #1f202e;" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1">
    <children>
-      <Button fx:id="saveButton" layoutX="1174.0" layoutY="879.0" mnemonicParsing="false" prefHeight="100.0" prefWidth="257.0" text="Guardar" />
+      <Button id="button" fx:id="saveButton" layoutX="1174.0" layoutY="879.0" mnemonicParsing="false" prefHeight="100.0" prefWidth="257.0" text="Guardar" />
       <Label id="label" layoutX="352.0" layoutY="277.0" prefHeight="70.0" prefWidth="290.0" text="Nuevo nombre de usuario:" textFill="WHITE">
          <font>
             <Font size="20.0" />
@@ -24,7 +24,7 @@
          <font>
             <Font size="20.0" />
          </font></Label>
-      <Button fx:id="logoutButton" layoutX="441.0" layoutY="879.0" mnemonicParsing="false" prefHeight="100.0" prefWidth="257.0" text="Cerrar sesion" />
+      <Button id="button" fx:id="logoutButton" layoutX="441.0" layoutY="879.0" mnemonicParsing="false" prefHeight="100.0" prefWidth="257.0" text="Cerrar sesion" />
       <ToggleButton fx:id="toggleButtonNotify" layoutX="853.0" layoutY="659.0" mnemonicParsing="false" prefHeight="93.0" prefWidth="214.0" text="Desactivar notificaciones" />
       <PasswordField fx:id="passwordFieldNewPassword" layoutX="1338.0" layoutY="153.0" prefHeight="70.0" prefWidth="242.0" />
       <Label id="label" layoutX="352.0" layoutY="153.0" prefHeight="70.0" prefWidth="290.0" text="Antiguo nombre de usuario:" textFill="WHITE">
