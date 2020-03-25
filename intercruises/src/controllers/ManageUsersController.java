@@ -5,45 +5,41 @@ import java.net.URL;
 import java.util.ResourceBundle;
 
 import application.Main;
+import javafx.application.Application;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.fxml.Initializable;
 import javafx.scene.Scene;
 import javafx.scene.control.Alert;
-import javafx.scene.control.Alert.AlertType;
 import javafx.scene.control.Button;
 import javafx.scene.control.PasswordField;
 import javafx.scene.control.TextField;
-import javafx.scene.image.Image;
-import javafx.scene.image.ImageView;
+import javafx.scene.control.ToggleButton;
+import javafx.scene.control.Alert.AlertType;
+import javafx.stage.Stage;
 import services.LoginService;
 
-public class LoginController implements Initializable{
-	
-	@FXML
-	private ImageView title;
-	
-	@FXML
-	private TextField email;
-	
-	@FXML
-	private PasswordField password;
-	
-	@FXML
-	private Button loginButton;
+public class ManageUsersController extends Application implements Initializable {
 
-	@Override
-	public void initialize(URL location, ResourceBundle resources) {
-		title.setImage(new Image("file:src/img/intercruises.png"));
-	}
+	@FXML
+	private TextField texFieldOldUsername, textFieldNewUsername;
 	
 	@FXML
+	private PasswordField textFieldNewPassword, passwordFieldConfirmPassword;
+
+	@FXML
+	private ToggleButton toggleButtonNotify;
+	
+	@FXML
+	private Button logoutButton, saveButton;
+	
+	/*@FXML
 	void login() {
 		
-		if(email.getText().isEmpty() || password.getText().isEmpty()) {
-			/*
+		if(textField.getText().isEmpty() || password.getText().isEmpty()) {
+			
 			 * Dialogo de contraseña erronea
-			 */
+			 
 			Alert alert = new Alert(AlertType.INFORMATION);
 			alert.setTitle("Error");
 			alert.setHeaderText(null);
@@ -57,9 +53,9 @@ public class LoginController implements Initializable{
 			System.out.println(response);
 			
 			if (!response.contains("token")) {
-				/*
+				
 				 * Dialogo de contraseña erronea
-				 */
+				 
 				Alert alert = new Alert(AlertType.INFORMATION);
 				alert.setTitle("Error");
 				alert.setHeaderText(null);
@@ -80,5 +76,20 @@ public class LoginController implements Initializable{
 		}
 		
 		
+	}*/
+	
+	
+
+	@Override
+	public void initialize(URL location, ResourceBundle resources) {
+		// TODO Auto-generated method stub
+		
 	}
+
+	@Override
+	public void start(Stage primaryStage) throws Exception {
+		// TODO Auto-generated method stub
+		
+	}
+
 }
