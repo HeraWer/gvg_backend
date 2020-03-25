@@ -25,6 +25,9 @@ public class EventCellController extends ListCell<Event> implements Initializabl
 	private Label location;
 	
 	@FXML
+	private Label title;
+	
+	@FXML
 	private Label description;
 	
 	@FXML
@@ -55,6 +58,7 @@ public class EventCellController extends ListCell<Event> implements Initializabl
 			
 			location = (Label) mainAP.lookup("#location");
 			description = (Label) mainAP.lookup("#description");
+			title = (Label) mainAP.lookup("#title");
 			
 			System.out.println(location == null);
 			
@@ -62,6 +66,8 @@ public class EventCellController extends ListCell<Event> implements Initializabl
 			
 			location.setText(event.getLocation().get("city"));
 			description.setText(event.getDescription());
+			System.out.println(event.getTitle());
+			title.setText(event.getTitle());
 			
 			setText(null);
 			setGraphic(mainAP);

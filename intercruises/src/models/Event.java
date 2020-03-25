@@ -4,11 +4,11 @@ import java.util.ArrayList;
 import java.util.HashMap;
 
 public class Event {
-	
+
 	private String _id;
 	private int number;
 	private NewUser publisher;
-	private String titulo;
+	private String title;
 	private String description;
 	private String date_published;
 	private boolean active;
@@ -16,15 +16,15 @@ public class Event {
 	private int seats;
 	private HashMap<String, String> location;
 	private ArrayList<Schedule> schedule;
-	
-	public Event(String _id, int number, NewUser publisher, String titulo, String description, String date_published,
+
+	public Event(String _id, int number, NewUser publisher, String title, String description, String date_published,
 			boolean active, ArrayList<NewUser> staffs, int seats, HashMap<String, String> location,
 			ArrayList<Schedule> schedule) {
 		super();
 		this._id = _id;
 		this.number = number;
 		this.publisher = publisher;
-		this.titulo = titulo;
+		this.title = title;
 		this.description = description;
 		this.date_published = date_published;
 		this.active = active;
@@ -58,12 +58,12 @@ public class Event {
 		this.publisher = publisher;
 	}
 
-	public String getTitulo() {
-		return titulo;
+	public String getTitle() {
+		return title;
 	}
 
-	public void setTitulo(String titulo) {
-		this.titulo = titulo;
+	public void setTitle(String title) {
+		this.title = title;
 	}
 
 	public String getDescription() {
@@ -121,5 +121,5 @@ public class Event {
 	public void setSchedule(ArrayList<Schedule> schedule) {
 		this.schedule = schedule;
 	}
-	
+
 }
