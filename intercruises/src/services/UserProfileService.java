@@ -11,7 +11,7 @@ import models.NewUser;
 
 public class UserProfileService {
 	
-	private static String getUserURL = "http://localhost:3000/getUser";
+	private static String getUserURL = "https://app-intercruises.herokuapp.com/getUser";
 	
 	public static NewUser recuperarUsuario(String username) {
 		HashMap<String,String> hm = new HashMap<String,String>();

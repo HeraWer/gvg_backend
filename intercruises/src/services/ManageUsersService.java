@@ -10,7 +10,7 @@ import models.UpdateUser;
 
 public class ManageUsersService {
 
-	String url = "http://localhost:3000/updateUser";
+	String url = "https://app-intercruises.herokuapp.com/updateUser";
 
 	public String checkCreds(String oldUsername, String newUsername, String newPassword) {
 		UpdateUser user = new UpdateUser(oldUsername, newUsername, newPassword);
