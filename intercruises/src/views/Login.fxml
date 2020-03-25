@@ -26,7 +26,7 @@
             <Image url="@../img/intercruises.png" />
          </image>
       </ImageView>
-      <Button id="button" fx:id="loginButton" layoutX="854.0" layoutY="696.0" mnemonicParsing="false" onAction="#login" prefHeight="79.0" prefWidth="212.0" text="Login" AnchorPane.bottomAnchor="305.0" AnchorPane.leftAnchor="854.0" AnchorPane.rightAnchor="854.0" AnchorPane.topAnchor="696.0" />
+      <Button id="button" fx:id="loginButton" layoutX="854.0" layoutY="696.0" mnemonicParsing="false" onAction="#login" onKeyPressed="#login" prefHeight="79.0" prefWidth="212.0" text="Login" AnchorPane.bottomAnchor="305.0" AnchorPane.leftAnchor="854.0" AnchorPane.rightAnchor="854.0" AnchorPane.topAnchor="696.0" />
       <PasswordField fx:id="password" layoutX="595.0" layoutY="435.0" prefHeight="105.0" prefWidth="730.0" promptText="Password" AnchorPane.bottomAnchor="540.0" AnchorPane.leftAnchor="595.0" AnchorPane.rightAnchor="595.0" AnchorPane.topAnchor="435.0">
          <font>
             <Font size="40.0" />

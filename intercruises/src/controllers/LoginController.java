@@ -16,6 +16,7 @@ import javafx.scene.control.PasswordField;
 import javafx.scene.control.TextField;
 import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
+import javafx.scene.input.KeyCode;
 import services.LoginService;
 
 public class LoginController implements Initializable{
@@ -35,7 +36,20 @@ public class LoginController implements Initializable{
 	@Override
 	public void initialize(URL location, ResourceBundle resources) {
 		title.setImage(new Image("file:src/img/intercruises.png"));
+		
+		loginButton.setOnKeyPressed(event -> {
+			if(event.getCode() == KeyCode.ENTER) {
+				login();
+			}
+		});
+		
+		password.setOnKeyPressed(event -> {
+			if(event.getCode() == KeyCode.ENTER) {
+				login();
+			}
+		});
 	}
+	
 	
 	@FXML
 	void login() {
