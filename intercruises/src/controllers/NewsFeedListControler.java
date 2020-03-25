@@ -24,25 +24,24 @@ public class NewsFeedListControler implements Initializable {
 	public void initialize(URL location, ResourceBundle resources) {
 		// TODO Auto-generated method stub
 		ol = FXCollections.observableArrayList(EventService.recuperarEventos());
+//		ol = FXCollections.observableArrayList();
 		
 		//Forma grafica de ver la lista
-		/*listView.setCellFactory(new Callback<ListView<Event>, ListCell<Event>>() {
+		listView.setCellFactory(new Callback<ListView<Event>, ListCell<Event>>() {
 			
 			@Override
 			public ListCell<Event> call(ListView<Event> param) {
 				// TODO Auto-generated method stub
 				return new EventCellController();
 			}
-		});*/
-		
-		
+		});
 		
 //		Event e = new Event();
 //		
 //		e.set_id("we");
 //		e.setDescription("Locaso");
 //		e.setLocation("barcelonaaaaaas");
-		
+//		
 //		ol.add(e);
 
 		listView.setItems(ol);

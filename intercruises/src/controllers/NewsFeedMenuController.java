@@ -18,6 +18,8 @@ public class NewsFeedMenuController extends Application{
 	@FXML
 	private Pane searchPane;
 	
+	static MainFrameController mfc;
+	
 	@Override
 	public void start(Stage arg0) throws Exception {
 		
@@ -27,12 +29,12 @@ public class NewsFeedMenuController extends Application{
 	void abrirNewsFeedList() {
 		try {
 			Scene scene = new Scene(FXMLLoader.load(getClass().getResource("../views/NewsFeedList.fxml")));
-			MainFrameController.borderPane.setCenter(scene.getRoot());
+			
+			mfc.bp.setCenter(scene.getRoot());
 		} catch (IOException e) {
 			// TODO Auto-generated catch block
 			System.out.println("NewsFeedMenuController.abrirNewsFeedList -- IOException: " + e.getMessage());
 			e.printStackTrace();
 		}
 	}
-
 }

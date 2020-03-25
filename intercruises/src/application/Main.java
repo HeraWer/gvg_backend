@@ -14,14 +14,18 @@ public class Main extends Application {
 	@Override
 	public void start(Stage primaryStage) {
 		try {
-//			Parent root = FXMLLoader.load(getClass().getResource("../views/Login.fxml"));
+			Parent root = FXMLLoader.load(getClass().getResource("../views/Login.fxml"));
 //			Parent root = FXMLLoader.load(getClass().getResource("../views/MainFrame.fxml"));
 //			Parent root = FXMLLoader.load(getClass().getResource("../views/NewsFeedMenu.fxml"));
-			Parent root = FXMLLoader.load(getClass().getResource("../views/NewsFeedList.fxml"));
-			
+//			Parent root = FXMLLoader.load(getClass().getResource("../views/NewsFeedList.fxml"));
+//			Parent root = FXMLLoader.load(getClass().getResource("../views/NewUserForm.fxml"));
+//			Parent root = FXMLLoader.load(getClass().getResource("../views/UserProfile.fxml"));
+//			Parent root = FXMLLoader.load(getClass().getResource("../views/UserProfile.fxml"));
+//			Parent root = FXMLLoader.load(getClass().getResource("../views/Settings.fxml"));
+
 			stage = primaryStage;
 			
-			System.out.println(getClass().getResource("../views/MainFrame.fxml"));
+			System.out.println(getClass().getResource("NewUserForm.fxml"));
 			Scene scene = new Scene(root, 1920, 1080);
 			scene.getStylesheets().add(getClass().getResource("application.css").toExternalForm());
 			stage.setScene(scene);
