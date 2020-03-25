@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.text.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane fx:id="saveButton" prefHeight="1080.0" prefWidth="1920.0" style="-fx-background-color: #1f202e;" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1">
+   <children>
+      <Button id="button" fx:id="saveButton" layoutX="1174.0" layoutY="879.0" mnemonicParsing="false" prefHeight="100.0" prefWidth="257.0" text="Guardar" />
+      <Label id="label" fx:id="labelChangeUsername" layoutX="384.0" layoutY="159.0" prefHeight="70.0" prefWidth="257.0" text="Nuevo nombre de usuario" textFill="WHITE">
+         <font>
+            <Font size="20.0" />
+         </font></Label>
+      <ImageView fitHeight="150.0" fitWidth="200.0" layoutX="110.0" layoutY="101.0" pickOnBounds="true" preserveRatio="true" AnchorPane.leftAnchor="50.0" AnchorPane.topAnchor="50.0">
+         <image>
+            <Image url="@../img/icon_editor_perfil.png" />
+         </image>
+      </ImageView>
+      <TextField fx:id="textFieldChangeUsername" layoutX="682.0" layoutY="159.0" prefHeight="70.0" prefWidth="242.0" />
+      <Label id="label" fx:id="labelChangePassword" layoutX="1041.0" layoutY="160.0" prefHeight="70.0" prefWidth="257.0" text="Cambiar contraseña" textFill="WHITE">
+         <font>
+            <Font size="20.0" />
+         </font></Label>
+      <Button id="button" fx:id="logoutButton" layoutX="441.0" layoutY="879.0" mnemonicParsing="false" prefHeight="100.0" prefWidth="257.0" text="Cerrar sesion" />
+      <ToggleButton fx:id="toggleButtonNotify" layoutX="853.0" layoutY="388.0" mnemonicParsing="false" prefHeight="93.0" prefWidth="214.0" text="Desactivar notificaciones" />
+      <PasswordField fx:id="passwordFieldChangePassword" layoutX="1357.0" layoutY="159.0" prefHeight="70.0" prefWidth="242.0" />
+   </children>
+</AnchorPane>
