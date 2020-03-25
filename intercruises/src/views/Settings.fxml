@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
+<?import javafx.geometry.*?>
 <?import javafx.scene.text.*?>
 <?import javafx.scene.image.*?>
 <?import javafx.scene.control.*?>
@@ -7,25 +8,51 @@
 <?import javafx.scene.layout.*?>
 <?import javafx.scene.layout.AnchorPane?>
 
-<AnchorPane fx:id="saveButton" prefHeight="1080.0" prefWidth="1920.0" style="-fx-background-color: #1f202e;" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1">
+<AnchorPane prefHeight="1080.0" prefWidth="1920.0" style="-fx-background-color: #1f202e;" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controllers.SettingsController">
    <children>
-      <Button id="button" fx:id="saveButton" layoutX="1174.0" layoutY="879.0" mnemonicParsing="false" prefHeight="100.0" prefWidth="257.0" text="Guardar" />
-      <Label id="label" fx:id="labelChangeUsername" layoutX="384.0" layoutY="159.0" prefHeight="70.0" prefWidth="257.0" text="Nuevo nombre de usuario" textFill="WHITE">
-         <font>
-            <Font size="20.0" />
-         </font></Label>
-      <ImageView fitHeight="150.0" fitWidth="200.0" layoutX="110.0" layoutY="101.0" pickOnBounds="true" preserveRatio="true" AnchorPane.leftAnchor="50.0" AnchorPane.topAnchor="50.0">
-         <image>
-            <Image url="@../img/icon_editor_perfil.png" />
-         </image>
-      </ImageView>
-      <TextField fx:id="textFieldChangeUsername" layoutX="682.0" layoutY="159.0" prefHeight="70.0" prefWidth="242.0" />
-      <Label id="label" fx:id="labelChangePassword" layoutX="1041.0" layoutY="160.0" prefHeight="70.0" prefWidth="257.0" text="Cambiar contraseña" textFill="WHITE">
-         <font>
-            <Font size="20.0" />
-         </font></Label>
-      <Button id="button" fx:id="logoutButton" layoutX="441.0" layoutY="879.0" mnemonicParsing="false" prefHeight="100.0" prefWidth="257.0" text="Cerrar sesion" />
-      <ToggleButton fx:id="toggleButtonNotify" layoutX="853.0" layoutY="388.0" mnemonicParsing="false" prefHeight="93.0" prefWidth="214.0" text="Desactivar notificaciones" />
-      <PasswordField fx:id="passwordFieldChangePassword" layoutX="1357.0" layoutY="159.0" prefHeight="70.0" prefWidth="242.0" />
+      <GridPane layoutX="281.0" layoutY="114.0" prefHeight="880.0" prefWidth="1720.0" AnchorPane.bottomAnchor="100.0" AnchorPane.leftAnchor="100.0" AnchorPane.rightAnchor="100.0" AnchorPane.topAnchor="100.0">
+        <columnConstraints>
+          <ColumnConstraints hgrow="SOMETIMES" maxWidth="1.7976931348623157E308" minWidth="10.0" prefWidth="316.0" />
+        </columnConstraints>
+        <rowConstraints>
+          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+        </rowConstraints>
+         <children>
+            <ImageView fitHeight="150.0" fitWidth="200.0" pickOnBounds="true" preserveRatio="true">
+               <GridPane.margin>
+                  <Insets left="100.0" />
+               </GridPane.margin>
+               <image>
+                  <Image url="@../img/icon_manage_users.png" />
+               </image>
+            </ImageView>
+            <Button id="button" fx:id="buttonManageUsers" mnemonicParsing="false" onAction="#openManageUsers" prefHeight="100.0" prefWidth="1200.0" text="Administrar usuarios" textFill="WHITE">
+               <GridPane.margin>
+                  <Insets left="400.0" />
+               </GridPane.margin>
+               <font>
+                  <Font size="20.0" />
+               </font>
+            </Button>
+            <ImageView fitHeight="150.0" fitWidth="200.0" pickOnBounds="true" preserveRatio="true" GridPane.rowIndex="2">
+               <image>
+                  <Image url="@../img/icon_cerrar_sesion.png" />
+               </image>
+               <GridPane.margin>
+                  <Insets left="100.0" />
+               </GridPane.margin>
+            </ImageView>
+            <Button id="button" fx:id="buttonLogout" mnemonicParsing="false" prefHeight="100.0" prefWidth="1200.0" text="Cerrar sesion" textFill="WHITE" GridPane.rowIndex="2">
+               <GridPane.margin>
+                  <Insets left="400.0" />
+               </GridPane.margin>
+               <font>
+                  <Font size="20.0" />
+               </font>
+            </Button>
+         </children>
+      </GridPane>
    </children>
 </AnchorPane>

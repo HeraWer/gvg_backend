@@ -20,7 +20,7 @@ public class Main extends Application {
 //			Parent root = FXMLLoader.load(getClass().getResource("../views/NewsFeedList.fxml"));
 //			Parent root = FXMLLoader.load(getClass().getResource("../views/NewUserForm.fxml"));
 //			Parent root = FXMLLoader.load(getClass().getResource("../views/UserProfile.fxml"));
-			Parent root = FXMLLoader.load(getClass().getResource("../views/Settings.fxml"));
+//			Parent root = FXMLLoader.load(getClass().getResource("../views/Settings.fxml"));
 
 			stage = primaryStage;
 			

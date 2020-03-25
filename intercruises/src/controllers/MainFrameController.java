@@ -54,6 +54,26 @@ public class MainFrameController implements Initializable {
 	}
 	
 	@FXML
+	void openSettings() {
+		try {
+			System.out.println(getClass().getResource("../views/Settings.fxml"));
+			File f = new File("bin/views/Settings.fxml");
+			System.out.println(f.exists());
+			URL url = new URL("file:/"+f.getAbsolutePath());
+			
+			System.out.println(url);
+
+			Scene settingsScene = new Scene(FXMLLoader.load(getClass().getResource("../views/Settings.fxml")));
+			bp.setCenter(settingsScene.getRoot());
+			
+		} catch (IOException e) {
+			// TODO Auto-generated catch block
+			System.out.println("MainFrameController.openSettings - IOException: " + e.getMessage());
+			e.printStackTrace();
+		}
+	}
+	
+	@FXML
 	void chivato() {
 		System.out.println("chivato MainFrameContorller");
 	}
@@ -63,6 +83,7 @@ public class MainFrameController implements Initializable {
 		// TODO Auto-generated method stub
 //		borderPane.getCenter().setStyle("-fx-background-color: #b51e37");
 		NewsFeedMenuController.mfc = this;
+		SettingsController.mfc = this;
 	}
 	
 }

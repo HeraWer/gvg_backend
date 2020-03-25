@@ -13,7 +13,7 @@
     -fx-font-size: 1.1em;
 }
 
-#buttonLogin:hover {
+#button:hover {
     -fx-background-color: 
         linear-gradient(from 0% 93% to 0% 100%, #a34313 0%, #903b12 100%),
         #9d4024,
@@ -21,7 +21,7 @@
         radial-gradient(center 50% 50%, radius 100%, #ea7f4b, #c54e2c);
 }
 
-#buttonLogin:pressed {
+#button:pressed {
     -fx-padding: 10 15 13 15;
     -fx-background-insets: 2 0 0 0,2 0 3 0, 2 0 4 0, 2 0 5 0;
 }

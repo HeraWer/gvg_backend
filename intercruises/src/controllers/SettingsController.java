@@ -1,34 +1,44 @@
 package controllers;
 
+import java.io.File;
+import java.io.IOException;
 import java.net.URL;
 import java.util.ResourceBundle;
 
 import javafx.application.Application;
 import javafx.fxml.FXML;
+import javafx.fxml.FXMLLoader;
 import javafx.fxml.Initializable;
+import javafx.scene.Scene;
 import javafx.scene.control.Button;
-import javafx.scene.control.Label;
-import javafx.scene.control.PasswordField;
-import javafx.scene.control.TextField;
-import javafx.scene.control.ToggleButton;
 import javafx.stage.Stage;
 
-public class SettingsController extends Application implements Initializable {
+public class SettingsController extends Application implements Initializable{
 	
 	@FXML
-	private Label labelChangeUsername, labelChangePassword;
+	private Button buttonLogout, buttonManageUsers;
+	
+	static MainFrameController mfc;
+	
+	@FXML
+	void openManageUsers() {
+		try {
+			System.out.println(getClass().getResource("../views/ManageUsers.fxml"));
+			File f = new File("bin/views/ManageUsers.fxml");
+			System.out.println(f.exists());
+			URL url = new URL("file:/"+f.getAbsolutePath());
+			
+			System.out.println(url);
 
-	@FXML
-	private TextField textFieldChangeUsername;
-	
-	@FXML
-	private PasswordField textFieldChangePassword;
-
-	@FXML
-	private ToggleButton toggleButtonDisableNotify;
-	
-	@FXML
-	private Button logoutButton, saveButton;
+			Scene settingsScene = new Scene(FXMLLoader.load(getClass().getResource("../views/ManageUsers.fxml")));
+			mfc.bp.setCenter(settingsScene.getRoot());
+			
+		} catch (IOException e) {
+			// TODO Auto-generated catch block
+			System.out.println("MainFrameController.openSettings - IOException: " + e.getMessage());
+			e.printStackTrace();
+		}
+	}
 
 	@Override
 	public void initialize(URL location, ResourceBundle resources) {

@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.text.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane prefHeight="1080.0" prefWidth="1920.0" style="-fx-background-color: #1f202e;" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1">
+   <children>
+      <Button fx:id="saveButton" layoutX="1174.0" layoutY="879.0" mnemonicParsing="false" prefHeight="100.0" prefWidth="257.0" text="Guardar" />
+      <Label id="label" layoutX="352.0" layoutY="277.0" prefHeight="70.0" prefWidth="290.0" text="Nuevo nombre de usuario:" textFill="WHITE">
+         <font>
+            <Font size="20.0" />
+         </font></Label>
+      <ImageView fitHeight="150.0" fitWidth="200.0" layoutX="110.0" layoutY="101.0" pickOnBounds="true" preserveRatio="true" AnchorPane.leftAnchor="50.0" AnchorPane.topAnchor="50.0">
+         <image>
+            <Image url="@../img/icon_editor_perfil.png" />
+         </image>
+      </ImageView>
+      <TextField fx:id="textFieldNewUsername" layoutX="683.0" layoutY="277.0" prefHeight="70.0" prefWidth="242.0" />
+      <Label id="label" layoutX="990.0" layoutY="153.0" prefHeight="70.0" prefWidth="290.0" text="Nueva contraseña:" textFill="WHITE">
+         <font>
+            <Font size="20.0" />
+         </font></Label>
+      <Button fx:id="logoutButton" layoutX="441.0" layoutY="879.0" mnemonicParsing="false" prefHeight="100.0" prefWidth="257.0" text="Cerrar sesion" />
+      <ToggleButton fx:id="toggleButtonNotify" layoutX="853.0" layoutY="659.0" mnemonicParsing="false" prefHeight="93.0" prefWidth="214.0" text="Desactivar notificaciones" />
+      <PasswordField fx:id="passwordFieldNewPassword" layoutX="1338.0" layoutY="153.0" prefHeight="70.0" prefWidth="242.0" />
+      <Label id="label" layoutX="352.0" layoutY="153.0" prefHeight="70.0" prefWidth="290.0" text="Antiguo nombre de usuario:" textFill="WHITE">
+         <font>
+            <Font size="20.0" />
+         </font>
+      </Label>
+      <TextField fx:id="texFieldOldUsername" layoutX="683.0" layoutY="153.0" prefHeight="70.0" prefWidth="242.0" />
+      <Label id="label" layoutX="990.0" layoutY="291.0" prefHeight="70.0" prefWidth="290.0" text="Confirmar contraseña:" textFill="WHITE">
+         <font>
+            <Font size="20.0" />
+         </font>
+      </Label>
+      <PasswordField fx:id="passwordFieldConfirmPassword" layoutX="1338.0" layoutY="291.0" prefHeight="70.0" prefWidth="242.0" />
+   </children>
+</AnchorPane>
