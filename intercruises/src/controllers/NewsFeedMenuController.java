@@ -29,6 +29,7 @@ public class NewsFeedMenuController extends Application{
 	void abrirNewsFeedList() {
 		try {
 			Scene scene = new Scene(FXMLLoader.load(getClass().getResource("../views/NewsFeedList.fxml")));
+			
 			mfc.bp.setCenter(scene.getRoot());
 		} catch (IOException e) {
 			// TODO Auto-generated catch block

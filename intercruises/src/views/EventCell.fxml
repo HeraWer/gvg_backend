@@ -15,12 +15,12 @@
       </ImageView>
       <Label fx:id="location" layoutX="180.0" layoutY="41.0" prefHeight="70.0" prefWidth="278.0" text="location" textFill="WHITE">
          <font>
-            <Font name="Consolas" size="53.0" />
+            <Font name="Consolas" size="32.0" />
          </font>
       </Label>
       <Label fx:id="description" layoutX="467.0" layoutY="23.0" prefHeight="106.0" prefWidth="1018.0" text="Descpripcion" textFill="WHITE">
          <font>
-            <Font name="Consolas" size="18.0" />
+            <Font name="Consolas" size="16.0" />
          </font>
       </Label>
       <ImageView fx:id="editIcon" fitHeight="113.0" fitWidth="117.0" layoutX="1672.0" layoutY="19.0" pickOnBounds="true" preserveRatio="true">

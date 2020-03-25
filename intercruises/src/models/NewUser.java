@@ -8,30 +8,26 @@ public class NewUser {
 	private String password;
 	private String name;
 	private String lastname;
-	private String dni;
+	private String DNI;
 	private String birthdate;
 	private HashMap<String, String> location;
-	private String role;
+	private HashMap<String, String> role;
 	private boolean active;
 	private boolean unavailability;
 	
-	public NewUser(String username, String password, String name, String lastname, String dni, String birthdate,
-			HashMap<String, String> location, String role, boolean active, boolean unavailability) {
+	public NewUser(String username, String password, String name, String lastname, String DNI, String birthdate,
+			HashMap<String, String> location, HashMap<String, String> role, boolean active, boolean unavailability) {
 		super();
 		this.username = username;
 		this.password = password;
 		this.name = name;
 		this.lastname = lastname;
-		this.dni = dni;
+		this.DNI = DNI;
 		this.birthdate = birthdate;
 		this.location = location;
 		this.role = role;
 		this.active = active;
 		this.unavailability = unavailability;
-	}
-	
-	public NewUser() {
-
 	}
 
 	public String getUsername() {
@@ -66,12 +62,12 @@ public class NewUser {
 		this.lastname = lastname;
 	}
 
-	public String getDni() {
-		return dni;
+	public String getDNI() {
+		return DNI;
 	}
 
-	public void setDni(String dni) {
-		this.dni = dni;
+	public void setDNI(String DNI) {
+		this.DNI = DNI;
 	}
 
 	public String getBirthdate() {
@@ -90,11 +86,11 @@ public class NewUser {
 		this.location = location;
 	}
 
-	public String getRole() {
+	public HashMap<String, String> getRole() {
 		return role;
 	}
 
-	public void setRole(String role) {
+	public void setRole(HashMap<String, String> role) {
 		this.role = role;
 	}
 

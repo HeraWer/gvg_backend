@@ -51,6 +51,7 @@ public class MainFrameController implements Initializable {
 			System.out.println("MainFrameController.abrirNewsFeed - IOException: " + e.getMessage());
 			e.printStackTrace();
 		}
+		
 	}
 	
 	@FXML

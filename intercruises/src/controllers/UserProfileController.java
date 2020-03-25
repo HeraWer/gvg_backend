@@ -39,7 +39,17 @@ public class UserProfileController implements Initializable{
 	@Override
 	public void initialize(URL location, ResourceBundle resources) {
 		// TODO Auto-generated method stub
-//		NewUser user = UserProfileService.recuperarUsuario();
+		rellenarInfo(UserProfileService.recuperarUsuario("Jovac"));
+	}
+	
+	void rellenarInfo(NewUser user) {
+		lblUsername.setText(user.getUsername());
+		lblRol.setText(user.getRole().get("role_name"));
+		lblNombre.setText(user.getName());
+		lblApellidos.setText(user.getLastname());
+		lblDNI.setText(user.getDNI());
+		lblCiudad.setText(user.getLocation().get("city"));
+		lblNacimiento.setText(user.getBirthdate());
 	}
 	
 }

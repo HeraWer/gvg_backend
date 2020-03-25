@@ -8,8 +8,6 @@ import java.net.URL;
 import java.util.HashMap;
 import java.util.ResourceBundle;
 
-import org.bson.BsonBinary;
-
 import com.google.gson.Gson;
 
 import javafx.collections.FXCollections;
@@ -76,8 +74,11 @@ public class NewUserFormController implements Initializable {
 		HashMap<String, String> location = new HashMap<String, String>();
 		location.put("city", ciudad);
 		location.put("address", direccion);
+		
+		HashMap<String, String> role = new HashMap<String, String>();
+		role.put("role_name", rol);
 
-		NewUser user = new NewUser(username, password, name, apellidos, dni, nacimiento, location, rol, active, false);
+		NewUser user = new NewUser(username, password, name, apellidos, dni, nacimiento, location, role, active, false);
 
 		String result = new Gson().toJson(user);
 
