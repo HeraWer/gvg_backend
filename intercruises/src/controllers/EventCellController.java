@@ -53,9 +53,14 @@ public class EventCellController extends ListCell<Event> implements Initializabl
 				e.printStackTrace();
 			}
 			
+			location = (Label) mainAP.lookup("#location");
+			description = (Label) mainAP.lookup("#description");
+			
 			System.out.println(location == null);
 			
-			location.setText(event.getLocation());
+			System.out.println(event.getLocation().get("city") + " -- " + event.getDescription());
+			
+			location.setText(event.getLocation().get("city"));
 			description.setText(event.getDescription());
 			
 			setText(null);
@@ -71,7 +76,6 @@ public class EventCellController extends ListCell<Event> implements Initializabl
 	@Override
 	public void initialize(URL location, ResourceBundle resources) {
 		// TODO Auto-generated method stub
-		
 	}
 	
 	

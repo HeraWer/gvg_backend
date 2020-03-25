@@ -28,11 +28,11 @@ public class MainFrameController implements Initializable {
 	private ImageView configIcon;
 
 	@FXML
-	public static BorderPane borderPane;
+	public BorderPane bp;
 	
 	@FXML
 	private GridPane gridPane;
-
+	
 	@FXML
 	void abrirNewsFeed() {
 		try {
@@ -44,7 +44,7 @@ public class MainFrameController implements Initializable {
 			System.out.println(url);
 
 			Scene newsFeedScene = new Scene(FXMLLoader.load(getClass().getResource("../views/NewsFeedMenu.fxml")));
-			borderPane.setCenter(newsFeedScene.getRoot());
+			bp.setCenter(newsFeedScene.getRoot());
 			
 		} catch (IOException e) {
 			// TODO Auto-generated catch block
@@ -62,6 +62,7 @@ public class MainFrameController implements Initializable {
 	public void initialize(URL arg0, ResourceBundle arg1) {
 		// TODO Auto-generated method stub
 //		borderPane.getCenter().setStyle("-fx-background-color: #b51e37");
+		NewsFeedMenuController.mfc = this;
 	}
-
+	
 }
