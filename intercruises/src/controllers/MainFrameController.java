@@ -4,27 +4,34 @@ import java.io.IOException;
 import java.net.URL;
 import java.util.ResourceBundle;
 
+import javafx.event.Event;
+import javafx.event.EventHandler;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.fxml.Initializable;
 import javafx.scene.Parent;
+import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
+import javafx.scene.input.MouseEvent;
 import javafx.scene.layout.BorderPane;
 import javafx.scene.layout.GridPane;
 
 public class MainFrameController implements Initializable {
 
 	@FXML
-	private ImageView newsIcon;
+	public ImageView newsIcon;
 
 	@FXML
-	private ImageView chatIcon;
+	public ImageView chatIcon;
+	
+	@FXML
+	public ImageView userIcon;
 
 	@FXML
-	private ImageView calendarIcon;
+	public ImageView calendarIcon;
 
 	@FXML
-	private ImageView configIcon;
+	public ImageView configIcon;
 
 	@FXML
 	public BorderPane bp;
@@ -69,6 +76,25 @@ public class MainFrameController implements Initializable {
 //		borderPane.getCenter().setStyle("-fx-background-color: #b51e37");
 		NewsFeedMenuController.mfc = this;
 		SettingsController.mfc = this;
+		
+		changeColour(newsIcon,new Image("file:src/img/newsFocused.png"),new Image("file:src/img/news_icon.png"));
+		changeColour(chatIcon,new Image("file:src/img/chatFocused.png"),new Image("file:src/img/chat_icon.png"));
+		changeColour(userIcon,new Image("file:src/img/profileFocused.png"),new Image("file:src/img/profile_boy_icon.png"));
+		changeColour(calendarIcon,new Image("file:src/img/calendarFocused.png"),new Image("file:src/img/calendar_icon.png"));
+		changeColour(configIcon,new Image("file:src/img/configFocused.png"),new Image("file:src/img/config_icon.png"));
+
 	}
+	
+	
+	public void changeColour(ImageView img,Image imgFocused,Image imgNotFocused) {
+		try {
+			img.setOnMouseEntered(e -> img.setImage(imgFocused));
+			img.setOnMouseExited(e -> img.setImage(imgNotFocused));
+
+		} catch (Exception e) {
+			System.out.println("Image not loaded");
+		}
+	}
+
 
 }
