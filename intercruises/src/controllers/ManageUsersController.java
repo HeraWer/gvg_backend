@@ -9,6 +9,7 @@ import javafx.application.Application;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.fxml.Initializable;
+import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.control.Alert;
 import javafx.scene.control.Button;
@@ -31,7 +32,9 @@ public class ManageUsersController extends Application implements Initializable 
 	private ToggleButton toggleButtonNotify;
 	
 	@FXML
-	private Button logoutButton, saveButton;
+	private Button saveButton;
+	
+	static MainFrameController mfc;
 	
 	/*@FXML
 	void login() {
@@ -77,6 +80,20 @@ public class ManageUsersController extends Application implements Initializable 
 		
 		
 	}*/
+	
+	void openNewUserForm() {
+		System.out.println("PEPEPITO");
+		try {
+			Parent newUserFormScene = FXMLLoader.load(getClass().getResource("../views/NewUserForm.fxml"));
+			newUserFormScene.getStylesheets().add(getClass().getResource("../application/application.css").toExternalForm());
+			mfc.bp.setCenter(newUserFormScene);
+
+		} catch (IOException e) {
+			// TODO Auto-generated catch block
+			System.out.println("MainFrameController.openSettings - IOException: " + e.getMessage());
+			e.printStackTrace();
+		}
+	}
 	
 	
 

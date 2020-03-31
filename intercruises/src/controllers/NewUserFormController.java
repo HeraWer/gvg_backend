@@ -55,7 +55,6 @@ public class NewUserFormController implements Initializable {
 	public void initialize(URL location, ResourceBundle resources) {
 		// TODO Auto-generated method stub
 		roles.setItems(FXCollections.observableArrayList(NewUserService.getRoles()));
-
 	}
 
 	@FXML
