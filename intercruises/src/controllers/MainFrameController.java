@@ -35,6 +35,8 @@ public class MainFrameController implements Initializable {
 
 	@FXML
 	private GridPane gridPane;
+	
+	public static String tokenSession;
 
 	@FXML
 	void abrirNewsFeed() {
@@ -71,6 +73,7 @@ public class MainFrameController implements Initializable {
 	public void initialize(URL arg0, ResourceBundle arg1) {
 		// TODO Auto-generated method stub
 //		borderPane.getCenter().setStyle("-fx-background-color: #b51e37");
+		System.out.println(tokenSession);
 		NewsFeedMenuController.mfc = this;
 		SettingsController.mfc = this;
 		ManageUsersController.mfc = this;

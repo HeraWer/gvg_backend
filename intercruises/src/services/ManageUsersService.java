@@ -26,6 +26,7 @@ public class ManageUsersService {
 			conn.setRequestMethod("POST");
 			conn.setRequestProperty("Accept", "application/json");
 			conn.setRequestProperty("Content-Type", "application/json");
+			conn.setRequestProperty("Authorization", controllers.MainFrameController.tokenSession);
 			conn.setDoOutput(true);
 
 			System.out.println(body);

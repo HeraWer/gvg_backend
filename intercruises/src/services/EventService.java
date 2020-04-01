@@ -25,6 +25,7 @@ public class EventService {
 			conn.setRequestMethod("GET");
 			conn.setRequestProperty("Accept", "application/json");
 			conn.setRequestProperty("Content-Type", "application/json");
+			conn.setRequestProperty("Authorization", controllers.MainFrameController.tokenSession);
 
 			String response = ConnUtils.formatearRespuesta(conn);
 

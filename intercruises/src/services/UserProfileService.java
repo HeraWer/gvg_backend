@@ -26,6 +26,7 @@ public class UserProfileService {
 			conn.setRequestMethod("POST");
 			conn.setRequestProperty("Accept", "application/json");
 			conn.setRequestProperty("Content-Type", "application/json");
+			conn.setRequestProperty("Authorization", controllers.MainFrameController.tokenSession);
 			conn.setDoOutput(true);
 			
 			Gson gson = new Gson();

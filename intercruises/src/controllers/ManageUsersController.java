@@ -45,7 +45,14 @@ public class ManageUsersController extends Application implements Initializable 
 			if(passwordFieldNewPassword.getText().equals(passwordFieldConfirmPassword.getText())) {
 				UpdateUser uu = new UpdateUser(texFieldOldUsername.getText(), textFieldNewUsername.getText(), passwordFieldNewPassword.getText());
 				System.out.println(new Gson().toJson(uu));
-				UpdateUserService.updateUser(new Gson().toJson(uu));
+				UpdateUserService.updateUser(new Gson().toJson(uu));/*
+				 * Dialogo de contraseña erronea
+				 */
+				Alert alert = new Alert(AlertType.INFORMATION);
+				alert.setTitle("Succesfull");
+				alert.setHeaderText(null);
+				alert.setContentText("El usuario se ha actualizado correctamente");
+				alert.showAndWait();
 				System.out.println("Usuario actualizado");
 			}else {
 				/*

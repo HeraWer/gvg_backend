@@ -32,7 +32,7 @@ public class LoginController implements Initializable{
 	
 	@FXML
 	private Button loginButton;
-
+	
 	@Override
 	public void initialize(URL location, ResourceBundle resources) {
 		title.setImage(new Image("file:src/img/intercruises.png"));
@@ -68,7 +68,7 @@ public class LoginController implements Initializable{
 			System.out.println("Contraseña erronea");
 		}else {
 			String response = new LoginService().checkCreds(email.getText(), password.getText());
-			System.out.println(response);
+			
 			
 			if (!response.contains("token")) {
 				/*
@@ -84,6 +84,10 @@ public class LoginController implements Initializable{
 				System.out.println("Contraseña erronea");
 			}else {
 				try {
+					response = response.substring(response.indexOf("token"));
+					response = (String) response.subSequence(8, response.length() - 2);					
+					controllers.MainFrameController.tokenSession = response;
+					
 					Main.stage.setScene(new Scene(FXMLLoader.load(getClass().getResource("../views/MainFrame.fxml")), 1920, 1080));
 				} catch (IOException e) {
 					// TODO Auto-generated catch block
@@ -92,7 +96,5 @@ public class LoginController implements Initializable{
 				}
 			}
 		}
-		
-		
 	}
 }
