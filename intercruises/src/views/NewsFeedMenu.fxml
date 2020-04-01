@@ -1,5 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
+<?import java.lang.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
 <?import javafx.scene.control.Label?>
 <?import javafx.scene.image.Image?>
 <?import javafx.scene.image.ImageView?>
@@ -7,7 +12,7 @@
 <?import javafx.scene.layout.Pane?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane fx:id="mainAP" prefHeight="1080.0" prefWidth="1920.0" style="-fx-background-color: #1f202e;" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controllers.NewsFeedMenuController">
+<AnchorPane fx:id="mainAP" prefHeight="1080.0" prefWidth="1920.0" style="-fx-background-color: #1f202e;" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controllers.NewsFeedMenuController">
    <children>
       <Pane fx:id="searchPane" layoutX="689.0" layoutY="366.0" onMouseClicked="#abrirNewsFeedList" prefHeight="118.0" prefWidth="425.0" style="-fx-background-color: grey;">
          <children>
@@ -23,7 +28,7 @@
             </Label>
          </children>
       </Pane>
-      <Pane layoutX="689.0" layoutY="623.0" prefHeight="118.0" prefWidth="425.0" style="-fx-background-color: grey;">
+      <Pane layoutX="689.0" layoutY="623.0" onMouseClicked="#openNewOffer" prefHeight="118.0" prefWidth="425.0" style="-fx-background-color: grey;">
          <children>
             <ImageView fitHeight="110.0" fitWidth="90.0" layoutX="8.0" layoutY="14.0" pickOnBounds="true" preserveRatio="true">
                <image>

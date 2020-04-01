@@ -4,13 +4,13 @@ import java.io.IOException;
 import java.net.URL;
 import java.util.ResourceBundle;
 
-import application.Main;
+import com.google.gson.Gson;
+
 import javafx.application.Application;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.fxml.Initializable;
 import javafx.scene.Parent;
-import javafx.scene.Scene;
 import javafx.scene.control.Alert;
 import javafx.scene.control.Button;
 import javafx.scene.control.PasswordField;
@@ -18,7 +18,9 @@ import javafx.scene.control.TextField;
 import javafx.scene.control.ToggleButton;
 import javafx.scene.control.Alert.AlertType;
 import javafx.stage.Stage;
-import services.LoginService;
+import models.UpdateUser;
+import services.UpdateUserService;
+
 
 public class ManageUsersController extends Application implements Initializable {
 
@@ -26,63 +28,58 @@ public class ManageUsersController extends Application implements Initializable 
 	private TextField texFieldOldUsername, textFieldNewUsername;
 	
 	@FXML
-	private PasswordField textFieldNewPassword, passwordFieldConfirmPassword;
+	private PasswordField passwordFieldNewPassword, passwordFieldConfirmPassword;
 
 	@FXML
 	private ToggleButton toggleButtonNotify;
 	
 	@FXML
-	private Button saveButton;
+	private Button buttonNewUser, buttunSaveButton;
 	
 	static MainFrameController mfc;
 	
-	/*@FXML
-	void login() {
-		
-		if(textField.getText().isEmpty() || password.getText().isEmpty()) {
-			
-			 * Dialogo de contraseña erronea
-			 
-			Alert alert = new Alert(AlertType.INFORMATION);
-			alert.setTitle("Error");
-			alert.setHeaderText(null);
-			alert.setContentText("El campo usuario y/o contraseña estan vacios");
-			alert.showAndWait();
-			email.setText("");
-			password.setText("");
-			System.out.println("Contraseña erronea");
-		}else {
-			String response = new LoginService().checkCreds(email.getText(), password.getText());
-			System.out.println(response);
-			
-			if (!response.contains("token")) {
-				
-				 * Dialogo de contraseña erronea
-				 
+	
+	@FXML
+	void updateUserButton() {
+		if(!texFieldOldUsername.getText().isEmpty() && !textFieldNewUsername.getText().isEmpty() && !passwordFieldNewPassword.getText().isEmpty() && !passwordFieldConfirmPassword.getText().isEmpty()) {
+			if(passwordFieldNewPassword.getText().equals(passwordFieldConfirmPassword.getText())) {
+				UpdateUser uu = new UpdateUser(texFieldOldUsername.getText(), textFieldNewUsername.getText(), passwordFieldNewPassword.getText());
+				System.out.println(new Gson().toJson(uu));
+				UpdateUserService.updateUser(new Gson().toJson(uu));
+				System.out.println("Usuario actualizado");
+			}else {
+				/*
+				 * Dialogo de las contraseñas no cuenciden
+				 */
 				Alert alert = new Alert(AlertType.INFORMATION);
 				alert.setTitle("Error");
 				alert.setHeaderText(null);
-				alert.setContentText("El usuario y/o contraseña no son correctos");
+				alert.setContentText("Los campos de contraseña no cuenciden");
 				alert.showAndWait();
-				email.setText("");
-				password.setText("");
-				System.out.println("Contraseña erronea");
-			}else {
-				try {
-					Main.stage.setScene(new Scene(FXMLLoader.load(getClass().getResource("../views/MainFrame.fxml")), 1920, 1080));
-				} catch (IOException e) {
-					// TODO Auto-generated catch block
-					System.out.println("LoginController.login - IOException: " + e.getMessage());
-					e.printStackTrace();
-				}
+				texFieldOldUsername.setText("");
+				textFieldNewUsername.setText("");
+				passwordFieldNewPassword.setText("");
+				passwordFieldConfirmPassword.setText("");
 			}
+		}else {
+			/*
+			 * Dialogo de campos vacios
+			 */
+			Alert alert = new Alert(AlertType.INFORMATION);
+			alert.setTitle("Error");
+			alert.setHeaderText(null);
+			alert.setContentText("Es necesario rellenar todos los campos para poder guardar el usuario actualizado");
+			alert.showAndWait();
+			texFieldOldUsername.setText("");
+			textFieldNewUsername.setText("");
+			passwordFieldNewPassword.setText("");
+			passwordFieldConfirmPassword.setText("");
 		}
 		
-		
-	}*/
+	}
 	
+	@FXML
 	void openNewUserForm() {
-		System.out.println("PEPEPITO");
 		try {
 			Parent newUserFormScene = FXMLLoader.load(getClass().getResource("../views/NewUserForm.fxml"));
 			newUserFormScene.getStylesheets().add(getClass().getResource("../application/application.css").toExternalForm());

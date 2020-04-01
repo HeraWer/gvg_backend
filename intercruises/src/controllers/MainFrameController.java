@@ -4,15 +4,12 @@ import java.io.IOException;
 import java.net.URL;
 import java.util.ResourceBundle;
 
-import javafx.event.Event;
-import javafx.event.EventHandler;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.fxml.Initializable;
 import javafx.scene.Parent;
 import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
-import javafx.scene.input.MouseEvent;
 import javafx.scene.layout.BorderPane;
 import javafx.scene.layout.GridPane;
 
@@ -76,6 +73,7 @@ public class MainFrameController implements Initializable {
 //		borderPane.getCenter().setStyle("-fx-background-color: #b51e37");
 		NewsFeedMenuController.mfc = this;
 		SettingsController.mfc = this;
+		ManageUsersController.mfc = this;
 		
 		changeColour(newsIcon,new Image("file:src/img/newsFocused.png"),new Image("file:src/img/news_icon.png"));
 		changeColour(chatIcon,new Image("file:src/img/chatFocused.png"),new Image("file:src/img/chat_icon.png"));

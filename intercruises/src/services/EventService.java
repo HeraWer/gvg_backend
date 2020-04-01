@@ -13,8 +13,8 @@ import models.Event;
 
 public class EventService {
 
-	private static String url = "https://app-intercruises.herokuapp.com/allEvents";
-	//private static String url = "http://localhost:3000/allEvents";
+	//private static String url = "https://app-intercruises.herokuapp.com/allEvents";
+	private static String url = "http://localhost:3000/allEvents";
 
 	public static ArrayList<Event> recuperarEventos() {
 		HttpURLConnection conn = null;
