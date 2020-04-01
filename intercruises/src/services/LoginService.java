@@ -10,8 +10,8 @@ import models.LoginUser;
 
 public class LoginService {
 
-	//String url = "https://app-intercruises.herokuapp.com/login";
-	String url = "http://localhost:3000/login";
+	String url = "https://app-intercruises.herokuapp.com/login";
+	//String url = "http://localhost:3000/login";
 
 	public String checkCreds(String username, String password) {
 		LoginUser user = new LoginUser(username,password);

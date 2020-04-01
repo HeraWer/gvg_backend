@@ -6,8 +6,8 @@ import java.net.URL;
 
 public class UpdateUserService {
 	
-	//private static String updateUserURL = "https://app-intercruises.herokuapp.com/updateUser";
-	private static String updateUserURL = "http://localhost:3000/updateUser";
+	private static String updateUserURL = "https://app-intercruises.herokuapp.com/updateUser";
+	//private static String updateUserURL = "http://localhost:3000/updateUser";
 
 	public static void updateUser(String jsonUpdateUser) {
 		
