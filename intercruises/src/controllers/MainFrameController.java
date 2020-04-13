@@ -7,6 +7,7 @@ import java.util.ResourceBundle;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.fxml.Initializable;
+import javafx.scene.image.ImageView;
 import javafx.scene.Parent;
 import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
@@ -60,6 +61,18 @@ public class MainFrameController implements Initializable {
 		} catch (IOException e) {
 			// TODO Auto-generated catch block
 			System.out.println("MainFrameController.openSettings - IOException: " + e.getMessage());
+			e.printStackTrace();
+		}
+	}
+	@FXML
+	void openCalendar() {
+		try {
+			Parent settingsScene = FXMLLoader.load(getClass().getResource("../views/Calendar.fxml"));
+			settingsScene.getStylesheets().add(getClass().getResource("../application/application.css").toExternalForm());
+			bp.setCenter(settingsScene);
+		} catch (IOException e) {
+			// TODO Auto-generated catch block
+			System.out.println("MainFrameController.openCalendar - IOException: " + e.getMessage());
 			e.printStackTrace();
 		}
 	}

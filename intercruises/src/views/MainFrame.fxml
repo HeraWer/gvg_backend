@@ -34,7 +34,7 @@
                         <Image url="@../img/chat_icon.png" />
                      </image>
                   </ImageView>
-                  <ImageView fx:id="calendarIcon" fitHeight="150.0" fitWidth="96.0" pickOnBounds="true" preserveRatio="true" GridPane.halignment="CENTER" GridPane.rowIndex="3" GridPane.valignment="CENTER">
+                  <ImageView fx:id="calendarIcon" fitHeight="150.0" fitWidth="96.0" onMouseClicked="#openCalendar" pickOnBounds="true" preserveRatio="true" GridPane.halignment="CENTER" GridPane.rowIndex="3" GridPane.valignment="CENTER">
                      <image>
                         <Image url="@../img/calendar_icon.png" />
                      </image>
