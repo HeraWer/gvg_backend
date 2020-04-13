@@ -7,18 +7,18 @@ public class Event {
 
 	private String _id;
 	private int number;
-	private NewUser publisher;
+	private String publisher;
 	private String title;
 	private String description;
 	private String date_published;
 	private boolean active;
-	private ArrayList<NewUser> staffs;
+	private ArrayList<String> staffs;
 	private int seats;
 	private HashMap<String, String> location;
 	private ArrayList<Schedule> schedule;
 
-	public Event(String _id, int number, NewUser publisher, String title, String description, String date_published,
-			boolean active, ArrayList<NewUser> staffs, int seats, HashMap<String, String> location,
+	public Event(String _id, int number, String publisher, String title, String description, String date_published,
+			boolean active, ArrayList<String> staffs, int seats, HashMap<String, String> location,
 			ArrayList<Schedule> schedule) {
 		super();
 		this._id = _id;
@@ -50,11 +50,11 @@ public class Event {
 		this.number = number;
 	}
 
-	public NewUser getPublisher() {
+	public String getPublisher() {
 		return publisher;
 	}
 
-	public void setPublisher(NewUser publisher) {
+	public void setPublisher(String publisher) {
 		this.publisher = publisher;
 	}
 
@@ -90,11 +90,11 @@ public class Event {
 		this.active = active;
 	}
 
-	public ArrayList<NewUser> getStaffs() {
+	public ArrayList<String> getStaffs() {
 		return staffs;
 	}
 
-	public void setStaffs(ArrayList<NewUser> staffs) {
+	public void setStaffs(ArrayList<String> staffs) {
 		this.staffs = staffs;
 	}
 
