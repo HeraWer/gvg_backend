@@ -1,0 +1,29 @@
+<component name="libraryTable">
+  <library name="jars">
+    <CLASSES>
+      <root url="jar://$PROJECT_DIR$/jars/javafx-controls-13.0.1.jar!/" />
+      <root url="jar://$PROJECT_DIR$/jars/javafx-graphics-13.0.1-linux.jar!/" />
+      <root url="jar://$PROJECT_DIR$/jars/javax.mail-1.6.2.jar!/" />
+      <root url="jar://$PROJECT_DIR$/jars/controlsfx-11.0.0.jar!/" />
+      <root url="jar://$PROJECT_DIR$/jars/ical4j-3.0.10.jar!/" />
+      <root url="jar://$PROJECT_DIR$/jars/commons-collections4-4.1.jar!/" />
+      <root url="jar://$PROJECT_DIR$/jars/javafx-base-13.0.1-linux.jar!/" />
+      <root url="jar://$PROJECT_DIR$/jars/mongo-java-driver-3.12.2.jar!/" />
+      <root url="jar://$PROJECT_DIR$/jars/javafx-graphics-13.0.1.jar!/" />
+      <root url="jar://$PROJECT_DIR$/jars/ikonli-core-11.3.4.jar!/" />
+      <root url="jar://$PROJECT_DIR$/jars/ikonli-fontawesome-pack-11.3.4.jar!/" />
+      <root url="jar://$PROJECT_DIR$/jars/bson-4.0.1.jar!/" />
+      <root url="jar://$PROJECT_DIR$/jars/ikonli-javafx-11.3.4.jar!/" />
+      <root url="jar://$PROJECT_DIR$/jars/gson-2.8.6.jar!/" />
+      <root url="jar://$PROJECT_DIR$/jars/activation-1.1.jar!/" />
+      <root url="jar://$PROJECT_DIR$/jars/commons-lang3-3.8.1.jar!/" />
+      <root url="jar://$PROJECT_DIR$/jars/slf4j-api-1.7.25.jar!/" />
+      <root url="jar://$PROJECT_DIR$/jars/view-11.8.3.jar!/" />
+      <root url="jar://$PROJECT_DIR$/jars/commons-codec-1.11.jar!/" />
+      <root url="jar://$PROJECT_DIR$/jars/javafx-base-13.0.1.jar!/" />
+      <root url="jar://$PROJECT_DIR$/jars/javafx-controls-13.0.1-linux.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>
