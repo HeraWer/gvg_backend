@@ -8,7 +8,7 @@
 <?import javafx.scene.layout.GridPane?>
 <?import javafx.scene.layout.RowConstraints?>
 
-<AnchorPane minHeight="1080.0" minWidth="1920.0" prefHeight="666.0" prefWidth="848.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controllers.MainFrameController">
+<AnchorPane minHeight="1020.0" minWidth="1920.0" prefHeight="1020.0" prefWidth="848.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controllers.MainFrameController">
    <children>
       <BorderPane fx:id="bp" minHeight="1080.0" minWidth="1920.0" onMouseEntered="#chivato" prefHeight="1080.0" prefWidth="1920.0">
          <left>
@@ -19,7 +19,6 @@
                <rowConstraints>
                   <RowConstraints maxHeight="279.0" minHeight="10.0" prefHeight="248.0" vgrow="SOMETIMES" />
                   <RowConstraints maxHeight="302.0" minHeight="10.0" prefHeight="219.0" vgrow="SOMETIMES" />
-                  <RowConstraints maxHeight="556.0" minHeight="10.0" prefHeight="211.0" vgrow="SOMETIMES" />
                   <RowConstraints maxHeight="314.0" minHeight="0.0" prefHeight="211.0" vgrow="SOMETIMES" />
                   <RowConstraints maxHeight="314.0" minHeight="10.0" prefHeight="226.0" vgrow="SOMETIMES" />
                </rowConstraints>
@@ -29,22 +28,17 @@
                         <Image url="@../img/news_icon.png" />
                      </image>
                   </ImageView>
-                  <ImageView fx:id="chatIcon" fitHeight="96.0" fitWidth="1079.0" pickOnBounds="true" preserveRatio="true" GridPane.halignment="CENTER" GridPane.rowIndex="2" GridPane.valignment="CENTER">
-                     <image>
-                        <Image url="@../img/chat_icon.png" />
-                     </image>
-                  </ImageView>
-                  <ImageView fx:id="calendarIcon" fitHeight="150.0" fitWidth="96.0" onMouseClicked="#openCalendar" pickOnBounds="true" preserveRatio="true" GridPane.halignment="CENTER" GridPane.rowIndex="3" GridPane.valignment="CENTER">
+                  <ImageView fx:id="calendarIcon" fitHeight="112.0" fitWidth="111.0" onMouseClicked="#openCalendar" pickOnBounds="true" preserveRatio="true" GridPane.halignment="CENTER" GridPane.rowIndex="2" GridPane.valignment="CENTER">
                      <image>
                         <Image url="@../img/calendar_icon.png" />
                      </image>
                   </ImageView>
-                  <ImageView fx:id="configIcon" fitHeight="150.0" fitWidth="96.0" onMouseClicked="#openSettings" pickOnBounds="true" preserveRatio="true" GridPane.halignment="CENTER" GridPane.rowIndex="4" GridPane.valignment="CENTER">
+                  <ImageView fx:id="configIcon" fitHeight="150.0" fitWidth="96.0" onMouseClicked="#openSettings" pickOnBounds="true" preserveRatio="true" GridPane.halignment="CENTER" GridPane.rowIndex="3" GridPane.valignment="CENTER">
                      <image>
                         <Image url="@../img/config_icon.png" />
                      </image>
                   </ImageView>
-                  <ImageView fx:id="userIcon" fitHeight="96.0" fitWidth="1079.0" pickOnBounds="true" preserveRatio="true" GridPane.halignment="CENTER" GridPane.rowIndex="1" GridPane.valignment="CENTER">
+                  <ImageView fx:id="userIcon" fitHeight="119.0" fitWidth="115.0" onMouseClicked="#openProfile" pickOnBounds="true" preserveRatio="true" GridPane.halignment="CENTER" GridPane.rowIndex="1" GridPane.valignment="CENTER">
                      <image>
                         <Image url="@../img/profile_boy_icon.png" />
                      </image>

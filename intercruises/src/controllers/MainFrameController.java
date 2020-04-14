@@ -76,6 +76,18 @@ public class MainFrameController implements Initializable {
 			e.printStackTrace();
 		}
 	}
+	@FXML
+	void openProfile() {
+		try {
+			Parent settingsScene = FXMLLoader.load(getClass().getResource("../views/Profile.fxml"));
+			settingsScene.getStylesheets().add(getClass().getResource("../application/application.css").toExternalForm());
+			bp.setCenter(settingsScene);
+		} catch (IOException e) {
+			// TODO Auto-generated catch block
+			System.out.println("MainFrameController.openProfile - IOException: " + e.getMessage());
+			e.printStackTrace();
+		}
+	}
 
 	@FXML
 	void chivato() {
