@@ -5,6 +5,7 @@ import java.util.HashMap;
 public class NewUser {
 	
 	private String username;
+	private String usernameOld;
 	private String password;
 	private String name;
 	private String lastname;
@@ -28,6 +29,25 @@ public class NewUser {
 		this.role = role;
 		this.active = active;
 		this.unavailability = unavailability;
+	}
+	public NewUser(String username,String usernameOld, String password, String name, String lastname, String DNI, String birthdate,
+			HashMap<String, String> location, HashMap<String, String> role, boolean active, boolean unavailability) {
+		super();
+		this.username = username;
+		this.usernameOld = usernameOld;
+		this.password = password;
+		this.name = name;
+		this.lastname = lastname;
+		this.DNI = DNI;
+		this.birthdate = birthdate;
+		this.location = location;
+		this.role = role;
+		this.active = active;
+		this.unavailability = unavailability;
+	}
+
+	public NewUser() {
+		// TODO Auto-generated constructor stub
 	}
 
 	public String getUsername() {
@@ -93,6 +113,12 @@ public class NewUser {
 	public void setRole(HashMap<String, String> role) {
 		this.role = role;
 	}
+	public void setRoleString(String role) {
+		HashMap<String, String> hm = new HashMap<>();
+		System.out.println("ROLE: "+role);
+		hm.put("role_name",role);
+		this.role = hm;
+	}
 
 	public boolean isActive() {
 		return active;
@@ -108,6 +134,11 @@ public class NewUser {
 
 	public void setUnavailability(boolean unavailability) {
 		this.unavailability = unavailability;
+	}
+
+	public void setUsernameOld(String usernameOld) {
+		this.usernameOld = usernameOld;
+		
 	}
 	
 }

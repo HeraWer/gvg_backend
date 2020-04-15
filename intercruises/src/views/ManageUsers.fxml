@@ -11,11 +11,11 @@
 
 <AnchorPane prefHeight="1020.0" prefWidth="1920.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controllers.ManageUsersController">
    <children>
-      <Button id="button" fx:id="buttonSaveButton" layoutX="1174.0" layoutY="879.0" mnemonicParsing="false" onAction="#updateUserButton" prefHeight="100.0" prefWidth="257.0" text="Guardar" textFill="WHITE">
+      <Button id="button" fx:id="buttonSaveButton" layoutX="1174.0" layoutY="875.0" mnemonicParsing="false" onAction="#updateUserButton" prefHeight="100.0" prefWidth="257.0" text="Guardar">
          <font>
             <Font size="20.0" />
          </font></Button>
-      <Label id="label" layoutX="342.0" layoutY="277.0" prefHeight="70.0" prefWidth="306.0" text="Nuevo nombre de usuario:" textFill="WHITE">
+      <Label layoutX="342.0" layoutY="277.0" prefHeight="70.0" prefWidth="306.0" text="Nuevo nombre de usuario:">
          <font>
             <Font size="20.0" />
          </font></Label>
@@ -25,22 +25,22 @@
          </image>
       </ImageView>
       <TextField fx:id="textFieldNewUsername" layoutX="683.0" layoutY="277.0" prefHeight="70.0" prefWidth="242.0" />
-      <Label id="label" layoutX="1061.0" layoutY="153.0" prefHeight="70.0" prefWidth="242.0" text="Nueva contraseña:" textFill="WHITE">
+      <Label layoutX="1061.0" layoutY="153.0" prefHeight="70.0" prefWidth="242.0" text="Nueva contraseña:">
          <font>
             <Font size="20.0" />
          </font></Label>
-      <Button id="button" fx:id="buttonNewUser" layoutX="441.0" layoutY="879.0" mnemonicParsing="false" onAction="#openNewUserForm" prefHeight="100.0" prefWidth="257.0" text="Nuevo usuario" textFill="WHITE">
+      <Button id="button" fx:id="buttonNewUser" layoutX="441.0" layoutY="879.0" mnemonicParsing="false" onAction="#openNewUserForm" prefHeight="100.0" prefWidth="257.0" text="Nuevo usuario">
          <font>
             <Font size="20.0" />
          </font></Button>
       <PasswordField fx:id="passwordFieldNewPassword" layoutX="1338.0" layoutY="153.0" prefHeight="70.0" prefWidth="242.0" />
-      <Label id="label" layoutX="349.0" layoutY="153.0" prefHeight="70.0" prefWidth="306.0" text="Antiguo nombre de usuario:" textFill="WHITE">
+      <Label layoutX="349.0" layoutY="153.0" prefHeight="70.0" prefWidth="306.0" text="Antiguo nombre de usuario:">
          <font>
             <Font size="20.0" />
          </font>
       </Label>
       <TextField fx:id="texFieldOldUsername" layoutX="683.0" layoutY="153.0" prefHeight="70.0" prefWidth="242.0" />
-      <Label id="label" layoutX="1061.0" layoutY="277.0" prefHeight="70.0" prefWidth="242.0" text="Confirmar contraseña:" textFill="WHITE">
+      <Label layoutX="1061.0" layoutY="277.0" prefHeight="70.0" prefWidth="242.0" text="Confirmar contraseña:">
          <font>
             <Font size="20.0" />
          </font>

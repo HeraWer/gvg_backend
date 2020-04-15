@@ -112,7 +112,7 @@ public class MainFrameController implements Initializable {
 	}
 	
 	
-	public void changeColour(ImageView img,Image imgFocused,Image imgNotFocused) {
+	public static void changeColour(ImageView img,Image imgFocused,Image imgNotFocused) {
 		try {
 			img.setOnMouseEntered(e -> img.setImage(imgFocused));
 			img.setOnMouseExited(e -> img.setImage(imgNotFocused));

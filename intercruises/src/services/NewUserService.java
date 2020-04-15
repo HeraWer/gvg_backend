@@ -16,7 +16,8 @@ public class NewUserService {
 	//private static String newUserURL = "https://app-intercruises.herokuapp.com/newUser";
 	private static String allRolesURL = "http://localhost:3000/allRoles";
 	private static String newUserURL = "http://localhost:3000/newUser";
-
+	private static String updateUserURL = "http://localhost:3000/updateFullUser";
+	
 	public static void insertarUsuario(String jsonUser) {
 		HttpURLConnection conn = null;
 		try {
@@ -37,6 +38,29 @@ public class NewUserService {
 			conn.disconnect();
 		} catch (IOException e) {
 			System.out.println("IOException-NewUserService.insertarUsuario: " + e.getMessage());
+			e.printStackTrace();
+		}
+	}
+	public static void updateUsuario(String jsonUser) {
+		HttpURLConnection conn = null;
+		try {
+			conn = (HttpURLConnection) new URL(updateUserURL).openConnection();
+
+			conn.setRequestMethod("POST");
+			conn.setRequestProperty("Accept", "application/json");
+			conn.setRequestProperty("Content-Type", "application/json");
+			conn.setRequestProperty("Authorization", controllers.MainFrameController.tokenSession);
+			conn.setDoOutput(true);
+			
+			ConnUtils.enviarBody(conn, jsonUser);
+
+			String response = ConnUtils.formatearRespuesta(conn);
+
+			System.out.println(response);
+			
+			conn.disconnect();
+		} catch (IOException e) {
+			System.out.println("IOException-NewUserService.updateUsuario: " + e.getMessage());
 			e.printStackTrace();
 		}
 	}

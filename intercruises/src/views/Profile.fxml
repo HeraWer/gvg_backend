@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
 <?import javafx.scene.control.DatePicker?>
 <?import javafx.scene.control.Label?>
 <?import javafx.scene.control.TextField?>
@@ -10,74 +11,89 @@
 <?import javafx.scene.text.Font?>
 <?import org.controlsfx.control.textfield.CustomPasswordField?>
 
-
 <AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="1020.0" prefWidth="1797.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controllers.ProfileController">
    <children>
-      <ImageView fx:id="profileImage" fitHeight="224.0" fitWidth="214.0" layoutX="84.0" layoutY="75.0" pickOnBounds="true" preserveRatio="true">
+      <ImageView id="profileImage" fx:id="profileImage" fitHeight="224.0" fitWidth="214.0" layoutX="84.0" layoutY="75.0" pickOnBounds="true" preserveRatio="true">
          <image>
             <Image url="@../../bin/img/defaultProfile.png" />
          </image>
       </ImageView>
-      <Label layoutX="481.0" layoutY="137.0" prefHeight="91.0" prefWidth="144.0" text="Name:">
+      <Label layoutX="492.0" layoutY="95.0" prefHeight="91.0" prefWidth="144.0" text="Name:">
          <font>
             <Font size="35.0" />
          </font>
       </Label>
-      <Label layoutX="484.0" layoutY="260.0" prefHeight="91.0" prefWidth="174.0" text="Surname:">
+      <Label layoutX="490.0" layoutY="179.0" prefHeight="91.0" prefWidth="174.0" text="Surname:">
          <font>
             <Font size="35.0" />
          </font>
       </Label>
-      <TextField layoutX="923.0" layoutY="154.0" prefHeight="56.0" prefWidth="722.0">
+      <TextField fx:id="txtName" layoutX="934.0" layoutY="112.0" prefHeight="56.0" prefWidth="722.0">
          <font>
             <Font size="25.0" />
          </font>
       </TextField>
-      <TextField layoutX="926.0" layoutY="278.0" prefHeight="56.0" prefWidth="722.0">
+      <TextField fx:id="txtSurname" layoutX="934.0" layoutY="197.0" prefHeight="56.0" prefWidth="722.0">
          <font>
             <Font size="25.0" />
          </font>
       </TextField>
-      <Label layoutX="484.0" layoutY="400.0" prefHeight="91.0" prefWidth="189.0" text="Username:">
+      <Label layoutX="495.0" layoutY="270.0" prefHeight="91.0" prefWidth="189.0" text="Username:">
          <font>
             <Font size="35.0" />
          </font>
       </Label>
-      <Label layoutX="484.0" layoutY="548.0" prefHeight="91.0" prefWidth="174.0" text="DNI:">
+      <Label layoutX="495.0" layoutY="367.0" prefHeight="91.0" prefWidth="174.0" text="DNI:">
          <font>
             <Font size="35.0" />
          </font>
       </Label>
-      <TextField layoutX="926.0" layoutY="418.0" prefHeight="56.0" prefWidth="722.0">
+      <TextField fx:id="txtUsername" layoutX="937.0" layoutY="288.0" prefHeight="56.0" prefWidth="722.0">
          <font>
             <Font size="25.0" />
          </font>
       </TextField>
-      <TextField layoutX="926.0" layoutY="565.0" prefHeight="56.0" prefWidth="722.0">
+      <TextField fx:id="txtDni" layoutX="937.0" layoutY="381.0" prefHeight="56.0" prefWidth="722.0">
          <font>
             <Font size="25.0" />
          </font>
       </TextField>
-      <DatePicker layoutX="926.0" layoutY="715.0" prefHeight="61.0" prefWidth="402.0" />
-      <Label layoutX="484.0" layoutY="707.0" prefHeight="91.0" prefWidth="174.0" text="BirthDate:">
+      <DatePicker fx:id="txtBirthDate" layoutX="937.0" layoutY="475.0" prefHeight="61.0" prefWidth="402.0" />
+      <Label layoutX="495.0" layoutY="467.0" prefHeight="91.0" prefWidth="174.0" text="BirthDate:">
          <font>
             <Font size="35.0" />
          </font>
       </Label>
-      <Label layoutX="481.0" layoutY="840.0" prefHeight="91.0" prefWidth="174.0" text="Password:">
+      <Label layoutX="492.0" layoutY="668.0" prefHeight="91.0" prefWidth="174.0" text="Password:">
          <font>
             <Font size="35.0" />
          </font>
       </Label>
-      <CustomPasswordField layoutX="926.0" layoutY="858.0" prefHeight="56.0" prefWidth="722.0">
+      <CustomPasswordField fx:id="txtPassword" layoutX="937.0" layoutY="686.0" prefHeight="56.0" prefWidth="722.0">
          <font>
             <Font size="25.0" />
          </font>
       </CustomPasswordField>
-      <Button id="button" layoutX="111.0" layoutY="856.0" mnemonicParsing="false" prefHeight="61.0" prefWidth="160.0" text="Confirm">
+      <Button id="button" layoutX="106.0" layoutY="799.0" mnemonicParsing="false" onMouseClicked="#confirmUser" prefHeight="61.0" prefWidth="160.0" text="Confirm">
          <font>
             <Font size="20.0" />
          </font>
       </Button>
+      <Label layoutX="496.0" layoutY="779.0" prefHeight="91.0" prefWidth="317.0" text="Confirm password:">
+         <font>
+            <Font size="35.0" />
+         </font>
+      </Label>
+      <CustomPasswordField fx:id="txtConfirmPassword" layoutX="939.0" layoutY="799.0" prefHeight="56.0" prefWidth="722.0">
+         <font>
+            <Font size="25.0" />
+         </font>
+      </CustomPasswordField>
+      <Label layoutX="497.0" layoutY="565.0" prefHeight="91.0" prefWidth="174.0" text="Role:">
+         <font>
+            <Font size="35.0" />
+         </font>
+      </Label>
+      <ComboBox fx:id="txtRole" layoutX="938.0" layoutY="580.0" prefHeight="61.0" prefWidth="402.0" />
    </children>
 </AnchorPane>

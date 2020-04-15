@@ -13,6 +13,8 @@ import javafx.scene.control.ComboBox;
 import javafx.scene.control.DatePicker;
 import javafx.scene.control.TextArea;
 import javafx.scene.control.TextField;
+import javafx.scene.image.Image;
+import javafx.scene.image.ImageView;
 import javafx.scene.layout.GridPane;
 import models.Event;
 
@@ -30,6 +32,9 @@ public class NewOfferController implements Initializable {
 	@FXML
 	private GridPane gridPaneContentDataPicker;
 	
+	@FXML
+	ImageView addCalendar;
+	
 	ArrayList<String> types = new ArrayList<String>();
 	
 	int row = 1;
@@ -41,6 +46,7 @@ public class NewOfferController implements Initializable {
 		types.add("offer");
 		comboBoxType.setItems(FXCollections.observableArrayList(types));
 		
+		MainFrameController.changeColour(addCalendar,new Image("file:src/img/addCalendarFocused.png"),new Image("file:src/img/addCalendar.png"));
 	}
 	
 	@FXML
@@ -57,8 +63,6 @@ public class NewOfferController implements Initializable {
 	
 	@FXML
 	void newOffer() {
-		
-		
 		java.util.Date fecha = new Date();
 		//Event e = new Event(40, publisher, textFieldTitle.getText(), textAreaDescription.getText(), fecha, true, "", textFieldPlaces.getText(), textFieldLocation.getText(), schedule)
 	}
