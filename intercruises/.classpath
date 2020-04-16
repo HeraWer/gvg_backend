@@ -9,7 +9,7 @@
 	<classpathentry kind="lib" path="src/jars/gson-2.8.6.jar"/>
 	<classpathentry kind="lib" path="src/jars/bson-4.0.1.jar"/>
 	<classpathentry kind="lib" path="src/jars/mongo-java-driver-3.12.2.jar"/>
-	<classpathentry kind="con" path="org.eclipse.jdt.USER_LIBRARY/JavaFX2"/>
+	<classpathentry kind="con" path="org.eclipse.jdt.USER_LIBRARY/JavaFX11"/>
 	<classpathentry kind="lib" path="src/jars/activation-1.1.jar"/>
 	<classpathentry kind="lib" path="src/jars/commons-codec-1.11.jar"/>
 	<classpathentry kind="lib" path="src/jars/commons-collections4-4.1.jar"/>
@@ -28,5 +28,6 @@
 	<classpathentry kind="lib" path="src/jars/javax.mail-1.6.2.jar"/>
 	<classpathentry kind="lib" path="src/jars/slf4j-api-1.7.25.jar"/>
 	<classpathentry kind="lib" path="src/jars/view-11.8.3.jar"/>
+	<classpathentry kind="lib" path="/EnginyeriaInversa_AGonzalez/lib/byte-buddy-1.10.2.jar"/>
 	<classpathentry kind="output" path="bin"/>
 </classpath>
