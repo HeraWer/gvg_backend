@@ -1,9 +1,13 @@
 package controllers;
 
 import java.net.URL;
+import java.time.LocalDate;
+import java.time.LocalTime;
 import java.util.ArrayList;
 import java.util.Date;
 import java.util.ResourceBundle;
+
+import com.calendarfx.view.TimeField;
 
 import javafx.collections.FXCollections;
 import javafx.fxml.FXML;
@@ -37,6 +41,9 @@ public class NewOfferController implements Initializable {
 	
 	ArrayList<String> types = new ArrayList<String>();
 	
+	ArrayList<LocalDate> fechas = new ArrayList<LocalDate>();
+	ArrayList<LocalTime> horas = new ArrayList<LocalTime>();
+	
 	int row = 1;
 
 	@Override
@@ -52,18 +59,30 @@ public class NewOfferController implements Initializable {
 	@FXML
 	public void newDate() {
 		DatePicker dp = new DatePicker();
-		dp.setPrefSize(350, 50);
+		TimeField tfStart = new TimeField();
+		TimeField tfEnd = new TimeField();
 		
-		row = row + 1;
+		dp.setPrefSize(350, 50);
+		tfStart.setPrefSize(100, 50);
+		tfEnd.setPrefSize(100, 50);
+		
+		row++;
 		gridPaneContentDataPicker.add(dp, 0, row);
+		
+		gridPaneContentDataPicker.add(tfStart, 1, row);
+		gridPaneContentDataPicker.add(tfEnd, 1, row);
+		
 		gridPaneContentDataPicker.setPrefHeight(gridPaneContentDataPicker.getHeight() + 30);
 		gridPaneContentDataPicker.setMargin(dp, new Insets(10, 0, 0, 0));
+		gridPaneContentDataPicker.setMargin(tfStart, new Insets(35, 10, 0, 10));
+		gridPaneContentDataPicker.setMargin(tfEnd, new Insets(40, 10, 0, 150));
 		
 	}
 	
 	@FXML
 	void newOffer() {
 		java.util.Date fecha = new Date();
+		
 		//Event e = new Event(40, publisher, textFieldTitle.getText(), textAreaDescription.getText(), fecha, true, "", textFieldPlaces.getText(), textFieldLocation.getText(), schedule)
 	}
 

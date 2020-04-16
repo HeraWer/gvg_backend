@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
+<?import com.calendarfx.view.TimeField?>
 <?import javafx.geometry.Insets?>
 <?import javafx.scene.control.Button?>
 <?import javafx.scene.control.ComboBox?>
@@ -29,7 +30,7 @@
             <Font size="20.0" />
          </font>
       </Label>
-      <TextArea fx:id="textAreaDescription" layoutX="209.0" layoutY="235.0" prefHeight="543.0" prefWidth="1520.0" />
+      <TextArea fx:id="textAreaDescription" layoutX="207.0" layoutY="239.0" prefHeight="543.0" prefWidth="1520.0" />
       <Label layoutX="404.0" layoutY="109.0" text="Seats:" textFill="#171717">
          <font>
             <Font size="20.0" />
@@ -58,11 +59,12 @@
          </font>
       </Label>
       <TextField fx:id="textFieldLocation" layoutX="815.0" layoutY="151.0" prefHeight="25.0" prefWidth="907.0" />
-      <ScrollPane hbarPolicy="NEVER" layoutX="209.0" layoutY="778.0" prefHeight="184.0" prefWidth="386.0" vbarPolicy="ALWAYS">
+      <ScrollPane hbarPolicy="NEVER" layoutX="209.0" layoutY="778.0" prefHeight="184.0" prefWidth="615.0" vbarPolicy="ALWAYS">
          <content>
-            <GridPane fx:id="gridPaneContentDataPicker" alignment="CENTER" prefHeight="180.0" prefWidth="374.0">
+            <GridPane fx:id="gridPaneContentDataPicker" alignment="CENTER" prefHeight="180.0" prefWidth="612.0">
               <columnConstraints>
-                <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                <ColumnConstraints hgrow="SOMETIMES" maxWidth="394.0" minWidth="10.0" prefWidth="357.0" />
+                  <ColumnConstraints hgrow="SOMETIMES" maxWidth="301.0" minWidth="10.0" prefWidth="255.0" />
               </columnConstraints>
               <rowConstraints>
                 <RowConstraints minHeight="30.0" prefHeight="30.0" vgrow="SOMETIMES" />
@@ -73,11 +75,21 @@
                         <Insets bottom="25.0" top="25.0" />
                      </GridPane.margin>
                   </DatePicker>
+                  <TimeField maxHeight="50.0" maxWidth="100.0" GridPane.columnIndex="1">
+                     <GridPane.margin>
+                        <Insets left="10.0" top="35.0" />
+                     </GridPane.margin>
+                  </TimeField>
+                  <TimeField maxHeight="50.0" maxWidth="100.0" GridPane.columnIndex="1">
+                     <GridPane.margin>
+                        <Insets left="150.0" top="40.0" />
+                     </GridPane.margin>
+                  </TimeField>
                </children>
             </GridPane>
          </content>
       </ScrollPane>
-      <ImageView fx:id="addCalendar" fitHeight="83.0" fitWidth="85.0" layoutX="614.0" layoutY="841.0" onMouseClicked="#newDate" pickOnBounds="true" preserveRatio="true" AnchorPane.bottomAnchor="96.0" AnchorPane.leftAnchor="614.0" AnchorPane.rightAnchor="1106.0" AnchorPane.topAnchor="841.0">
+      <ImageView fx:id="addCalendar" fitHeight="83.0" fitWidth="85.0" layoutX="884.0" layoutY="829.0" onMouseClicked="#newDate" pickOnBounds="true" preserveRatio="true" AnchorPane.bottomAnchor="108.0" AnchorPane.leftAnchor="884.0" AnchorPane.rightAnchor="836.0" AnchorPane.topAnchor="829.0">
          <image>
             <Image url="@../img/addCalendar.png" />
          </image>
