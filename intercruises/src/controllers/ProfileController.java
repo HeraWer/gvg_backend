@@ -61,12 +61,7 @@ public class ProfileController extends Application implements Initializable {
 	ComboBox txtRole;
 
 	PhotoService ps = new PhotoService();
-	DateTimeFormatter formatterSalida = DateTimeFormatter.ofPattern("dd/MM/yyyy");
 	DateTimeFormatter formatterEntrada = DateTimeFormatter.ofPattern("dd/MM/yyyy");
-	final DateTimeFormatter dtf = DateTimeFormatter.ofPattern("yyyy-MM-dd");
-
-	// DateFormat formatter = new SimpleDateFormat("dd/MM/yyyy");
-	// SimpleDateFormat format = new SimpleDateFormat("dd/MM/yyyy");
 	LocalDate localDate;
 
 	@Override
@@ -85,7 +80,6 @@ public class ProfileController extends Application implements Initializable {
 			txtSurname.setText(user.getLastname());
 			txtDni.setText(user.getDNI());
 			txtUsername.setText(user.getUsername());
-			System.out.println("DATE 1: " + user.getBirthdate());
 			localDate = LocalDate.parse(user.getBirthdate().replaceAll("-", "/"), formatterEntrada);
 			txtBirthDate.setValue(localDate);
 			txtRole.setValue(user.getRole().get("role_name"));
@@ -108,13 +102,11 @@ public class ProfileController extends Application implements Initializable {
 			user.setDNI(txtDni.getText());
 		if (!txtBirthDate.getValue().toString().isBlank()) {
 			String date2 = txtBirthDate.getEditor().getText();
-			System.out.println("DATE 2: " + date2);
 			if (date2.charAt(1) == '-' || date2.charAt(1) == '/')
 				date2 = "0" + date2;
 			if (date2.charAt(4) == '-' || date2.charAt(4) == '/')
 				date2 = date2.substring(0, 3) + "0" + date2.substring(3);
 
-			System.out.println("DATE 3: " + date2);
 			user.setBirthdate(date2);
 		}
 		user.setRoleString(txtRole.getSelectionModel().getSelectedItem().toString());
