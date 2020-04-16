@@ -6,7 +6,6 @@ import java.net.URL;
 
 import com.google.gson.Gson;
 
-import javafx.scene.image.Image;
 import models.LoginUser;
 
 public class LoginService {
