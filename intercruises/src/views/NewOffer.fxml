@@ -42,7 +42,7 @@
             <Font size="26.0" />
          </font>
       </Label>
-      <Button id="button" layoutX="1414.0" layoutY="824.0" mnemonicParsing="false" prefHeight="63.0" prefWidth="189.0" text="Crear" textFill="#171717">
+      <Button id="button" layoutX="1414.0" layoutY="824.0" mnemonicParsing="false" onAction="#newOffer" prefHeight="63.0" prefWidth="189.0" text="Crear" textFill="#171717">
          <font>
             <Font size="20.0" />
          </font>
@@ -70,17 +70,17 @@
                 <RowConstraints minHeight="30.0" prefHeight="30.0" vgrow="SOMETIMES" />
               </rowConstraints>
                <children>
-                  <DatePicker layoutX="10.0" layoutY="75.0" prefHeight="50.0" prefWidth="350.0">
+                  <DatePicker fx:id="datePickerInit" layoutX="10.0" layoutY="75.0" prefHeight="50.0" prefWidth="350.0">
                      <GridPane.margin>
                         <Insets bottom="25.0" top="25.0" />
                      </GridPane.margin>
                   </DatePicker>
-                  <TimeField maxHeight="50.0" maxWidth="100.0" GridPane.columnIndex="1">
+                  <TimeField fx:id="tfStartInit" maxHeight="50.0" maxWidth="100.0" GridPane.columnIndex="1">
                      <GridPane.margin>
                         <Insets left="10.0" top="35.0" />
                      </GridPane.margin>
                   </TimeField>
-                  <TimeField maxHeight="50.0" maxWidth="100.0" GridPane.columnIndex="1">
+                  <TimeField fx:id="tfEndInit" maxHeight="50.0" maxWidth="100.0" GridPane.columnIndex="1">
                      <GridPane.margin>
                         <Insets left="150.0" top="40.0" />
                      </GridPane.margin>

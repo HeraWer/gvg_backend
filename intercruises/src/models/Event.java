@@ -16,6 +16,21 @@ public class Event {
 	private int seats;
 	private HashMap<String, String> location;
 	private ArrayList<Schedule> schedule;
+	
+	
+
+	public Event(String publisher, String title, String description, boolean active, ArrayList<String> staffs,
+			int seats, HashMap<String, String> location, ArrayList<Schedule> schedule) {
+		super();
+		this.publisher = publisher;
+		this.title = title;
+		this.description = description;
+		this.active = active;
+		this.staffs = staffs;
+		this.seats = seats;
+		this.location = location;
+		this.schedule = schedule;
+	}
 
 	public Event(String _id, int number, String publisher, String title, String description, String date_published,
 			boolean active, ArrayList<String> staffs, int seats, HashMap<String, String> location,
