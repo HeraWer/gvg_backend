@@ -28,19 +28,19 @@ public class Main extends Application {
 			stage = primaryStage;
 			
 			
-			Scene scene = new Scene(root, 1920, 1020);
+			Scene scene = new Scene(root, 1080, 1020);
 			scene.getStylesheets().add(getClass().getResource("application.css").toExternalForm());
 			stage.setScene(scene);
 			stage.setMaximized(true);
 			stage.setResizable(true);
 			
-			Rectangle2D primaryScreenBounds = Screen.getPrimary().getVisualBounds();
+			/*Rectangle2D primaryScreenBounds = Screen.getPrimary().getVisualBounds();
 			stage.setX(primaryScreenBounds.getMinX());
 			stage.setY(primaryScreenBounds.getMinY());
 			stage.setMaxWidth(primaryScreenBounds.getWidth());
 			stage.setMinWidth(primaryScreenBounds.getWidth());
 			stage.setMaxHeight(primaryScreenBounds.getHeight());
-			stage.setMinHeight(primaryScreenBounds.getHeight());
+			stage.setMinHeight(primaryScreenBounds.getHeight());*/
 			
 			stage.show();
 		} catch(Exception e) {

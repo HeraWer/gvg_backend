@@ -12,8 +12,8 @@ import models.LoginUser;
 
 public class PhotoService {
 
-	// String url = "https://app-intercruises.herokuapp.com/getPhoto";
-	String url = "http://localhost:3000/getPhoto";
+	String url = "https://app-intercruises.herokuapp.com/getPhoto";
+	//String url = "http://localhost:3000/getPhoto";
 
 	public Image getPhoto(String username) {
 

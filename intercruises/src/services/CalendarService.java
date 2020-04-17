@@ -14,8 +14,8 @@ import models.Event;
 
 public class CalendarService {
 
-	// private static String url = "https://app-intercruises.herokuapp.com/";
-	private static String url = "http://localhost:3000/";
+	private static String url = "https://app-intercruises.herokuapp.com/";
+	//private static String url = "http://localhost:3000/";
 
 	public static String recuperarUserId(String username) {
 		HttpURLConnection conn = null;

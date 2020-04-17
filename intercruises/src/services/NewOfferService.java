@@ -10,7 +10,8 @@ import models.Event;
 
 public class NewOfferService {
 
-	private static String url = "http://localhost:3000/createEvent";
+	private static String url = "https://app-intercruises.herokuapp.com/createEvent";
+	//private static String url = "http://localhost:3000/createEvent";
 	
 	public static void crearEvento(Event event) {
 		

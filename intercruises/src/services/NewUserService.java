@@ -12,12 +12,12 @@ import com.google.gson.JsonParser;
 
 public class NewUserService {
 
-	//private static String allRolesURL = "https://app-intercruises.herokuapp.com/allRoles";
-	//private static String newUserURL = "https://app-intercruises.herokuapp.com/newUser";
-	//private static String newUserURL = "https://app-intercruises.herokuapp.com/updateFullUser";
-	private static String allRolesURL = "http://localhost:3000/allRoles";
-	private static String newUserURL = "http://localhost:3000/newUser";
-	private static String updateUserURL = "http://localhost:3000/updateFullUser";
+	private static String allRolesURL = "https://app-intercruises.herokuapp.com/allRoles";
+	private static String newUserURL = "https://app-intercruises.herokuapp.com/newUser";
+	private static String updateUserURL = "https://app-intercruises.herokuapp.com/updateFullUser";
+	//private static String allRolesURL = "http://localhost:3000/allRoles";
+	//private static String newUserURL = "http://localhost:3000/newUser";
+	//private static String updateUserURL = "http://localhost:3000/updateFullUser";
 	
 	public static void insertarUsuario(String jsonUser) {
 		HttpURLConnection conn = null;
