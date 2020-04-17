@@ -109,7 +109,7 @@ public class NewOfferController implements Initializable {
 
 		Event evento = new Event(_id, textFieldTitle.getText(), textAreaDescription.getText(),
 				true, new ArrayList<String>(), Integer.parseInt(textFieldPlaces.getText()), location,
-				formataFechasHoras());
+				formataFechasHoras(),comboBoxType.getSelectionModel().getSelectedItem().toString());
 		NewOfferService.crearEvento(evento);
 	}
 

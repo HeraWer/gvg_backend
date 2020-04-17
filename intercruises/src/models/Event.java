@@ -16,11 +16,12 @@ public class Event {
 	private int seats;
 	private HashMap<String, String> location;
 	private ArrayList<Schedule> schedule;
+	private String type;
 	
 	
 
 	public Event(String publisher, String title, String description, boolean active, ArrayList<String> staffs,
-			int seats, HashMap<String, String> location, ArrayList<Schedule> schedule) {
+			int seats, HashMap<String, String> location, ArrayList<Schedule> schedule,String type) {
 		super();
 		this.publisher = publisher;
 		this.title = title;
@@ -30,6 +31,7 @@ public class Event {
 		this.seats = seats;
 		this.location = location;
 		this.schedule = schedule;
+		this.type = type;
 	}
 
 	public Event(String _id, int number, String publisher, String title, String description, String date_published,
