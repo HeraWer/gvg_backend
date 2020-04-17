@@ -29,13 +29,13 @@ public class LoginService {
 			conn.setRequestProperty("Authorization", controllers.MainFrameController.tokenSession);
 			conn.setDoOutput(true);
 
-			System.out.println(body);
+			System.out.println("BODY: "+body);
 
 			ConnUtils.enviarBody(conn, body);
 
 			String response = ConnUtils.formatearRespuesta(conn);
 			
-			System.out.println(response);
+			System.out.println("RESPONSE: "+response);
 			
 			conn.disconnect();
 			

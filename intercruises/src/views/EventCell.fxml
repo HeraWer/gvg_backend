@@ -6,19 +6,19 @@
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane fx:id="mainAP" minHeight="150.0" minWidth="1803.0" onMouseEntered="#chivato" style="-fx-background-color: #661522;" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controllers.EventCellController">
+<AnchorPane fx:id="mainAP" minHeight="150.0" minWidth="1803.0" onMouseEntered="#chivato" style="-fx-background-color: #141414;" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controllers.EventCellController">
    <children>
       <ImageView fx:id="userIcon" fitHeight="136.0" fitWidth="163.0" layoutX="14.0" layoutY="7.0" pickOnBounds="true" preserveRatio="true">
          <image>
             <Image url="@../img/pawn_icon.png" />
          </image>
       </ImageView>
-      <Label fx:id="location" layoutX="150.0" layoutY="76.0" prefHeight="54.0" prefWidth="537.0" text="location" textFill="#088cff">
+      <Label fx:id="location" layoutX="163.0" layoutY="82.0" prefHeight="54.0" prefWidth="537.0" text="location" textFill="#e4e4e4">
          <font>
             <Font name="Consolas" size="32.0" />
          </font>
       </Label>
-      <Label fx:id="description" layoutX="714.0" layoutY="23.0" prefHeight="106.0" prefWidth="771.0" text="Descpripcion" textAlignment="JUSTIFY" textFill="WHITE" wrapText="true">
+      <Label fx:id="description" layoutX="714.0" layoutY="23.0" prefHeight="106.0" prefWidth="771.0" text="Descripcion" textAlignment="JUSTIFY" textFill="WHITE" wrapText="true">
          <font>
             <Font name="Consolas" size="16.0" />
          </font>
@@ -38,7 +38,7 @@
             <Image url="@../img/check_icon.png" />
          </image>
       </ImageView>
-      <Label fx:id="title" layoutX="150.0" layoutY="22.0" prefHeight="54.0" prefWidth="537.0" text="title" textFill="#47c91b">
+      <Label fx:id="title" layoutX="163.0" layoutY="14.0" prefHeight="54.0" prefWidth="537.0" text="title" textFill="#e8e8e8">
          <font>
             <Font name="Consolas Bold" size="32.0" />
          </font>

@@ -1,14 +1,33 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <classpath>
 	<classpathentry kind="src" path="src"/>
-	<classpathentry kind="lib" path="src/jars/gson-2.8.6.jar"/>
-	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER/org.eclipse.jdt.internal.debug.ui.launcher.StandardVMType/JavaSE-1.8">
+	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER">
 		<attributes>
 			<attribute name="module" value="true"/>
 		</attributes>
 	</classpathentry>
-	<classpathentry kind="con" path="org.eclipse.fx.ide.jdt.core.JAVAFX_CONTAINER"/>
+	<classpathentry kind="lib" path="src/jars/gson-2.8.6.jar"/>
 	<classpathentry kind="lib" path="src/jars/bson-4.0.1.jar"/>
 	<classpathentry kind="lib" path="src/jars/mongo-java-driver-3.12.2.jar"/>
+	<classpathentry kind="con" path="org.eclipse.jdt.USER_LIBRARY/JavaFX11"/>
+	<classpathentry kind="lib" path="src/jars/activation-1.1.jar"/>
+	<classpathentry kind="lib" path="src/jars/commons-codec-1.11.jar"/>
+	<classpathentry kind="lib" path="src/jars/commons-collections4-4.1.jar"/>
+	<classpathentry kind="lib" path="src/jars/commons-lang3-3.8.1.jar"/>
+	<classpathentry kind="lib" path="src/jars/controlsfx-11.0.0.jar"/>
+	<classpathentry kind="lib" path="src/jars/ical4j-3.0.10.jar"/>
+	<classpathentry kind="lib" path="src/jars/ikonli-core-11.3.4.jar"/>
+	<classpathentry kind="lib" path="src/jars/ikonli-fontawesome-pack-11.3.4.jar"/>
+	<classpathentry kind="lib" path="src/jars/ikonli-javafx-11.3.4.jar"/>
+	<classpathentry kind="lib" path="src/jars/javafx-base-13.0.1-linux.jar"/>
+	<classpathentry kind="lib" path="src/jars/javafx-base-13.0.1.jar"/>
+	<classpathentry kind="lib" path="src/jars/javafx-controls-13.0.1-linux.jar"/>
+	<classpathentry kind="lib" path="src/jars/javafx-controls-13.0.1.jar"/>
+	<classpathentry kind="lib" path="src/jars/javafx-graphics-13.0.1-linux.jar"/>
+	<classpathentry kind="lib" path="src/jars/javafx-graphics-13.0.1.jar"/>
+	<classpathentry kind="lib" path="src/jars/javax.mail-1.6.2.jar"/>
+	<classpathentry kind="lib" path="src/jars/slf4j-api-1.7.25.jar"/>
+	<classpathentry kind="lib" path="src/jars/view-11.8.3.jar"/>
+	<classpathentry kind="lib" path="/EnginyeriaInversa_AGonzalez/lib/byte-buddy-1.10.2.jar"/>
 	<classpathentry kind="output" path="bin"/>
 </classpath>

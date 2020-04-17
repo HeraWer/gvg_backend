@@ -2,22 +2,27 @@ package models;
 
 public class Schedule {
 	
-	private String date;
+	private String day;
 	private String hour_start;
 	private String hour_end;
 	
-	public Schedule(String date, String hour_start, String hour_end) {
+	public Schedule(String day, String hour_start, String hour_end) {
 		super();
-		this.date = date;
+		this.day = day;
 		this.hour_start = hour_start;
 		this.hour_end = hour_end;
 	}
 	
-	public String getDate() {
-		return date;
+	@Override
+	public String toString() {
+		return "Schedule [day=" + day + ", hour_start=" + hour_start + ", hour_end=" + hour_end + "]";
 	}
-	public void setDate(String date) {
-		this.date = date;
+
+	public String getDay() {
+		return day;
+	}
+	public void setDay(String day) {
+		this.day = day;
 	}
 	public String getHour_start() {
 		return hour_start;

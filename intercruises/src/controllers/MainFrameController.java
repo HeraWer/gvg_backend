@@ -7,6 +7,7 @@ import java.util.ResourceBundle;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.fxml.Initializable;
+import javafx.scene.image.ImageView;
 import javafx.scene.Parent;
 import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
@@ -63,6 +64,30 @@ public class MainFrameController implements Initializable {
 			e.printStackTrace();
 		}
 	}
+	@FXML
+	void openCalendar() {
+		try {
+			Parent settingsScene = FXMLLoader.load(getClass().getResource("../views/Calendar.fxml"));
+			settingsScene.getStylesheets().add(getClass().getResource("../application/application.css").toExternalForm());
+			bp.setCenter(settingsScene);
+		} catch (IOException e) {
+			// TODO Auto-generated catch block
+			System.out.println("MainFrameController.openCalendar - IOException: " + e.getMessage());
+			e.printStackTrace();
+		}
+	}
+	@FXML
+	void openProfile() {
+		try {
+			Parent settingsScene = FXMLLoader.load(getClass().getResource("../views/Profile.fxml"));
+			settingsScene.getStylesheets().add(getClass().getResource("../application/application.css").toExternalForm());
+			bp.setCenter(settingsScene);
+		} catch (IOException e) {
+			// TODO Auto-generated catch block
+			System.out.println("MainFrameController.openProfile - IOException: " + e.getMessage());
+			e.printStackTrace();
+		}
+	}
 
 	@FXML
 	void chivato() {
@@ -87,7 +112,7 @@ public class MainFrameController implements Initializable {
 	}
 	
 	
-	public void changeColour(ImageView img,Image imgFocused,Image imgNotFocused) {
+	public static void changeColour(ImageView img,Image imgFocused,Image imgNotFocused) {
 		try {
 			img.setOnMouseEntered(e -> img.setImage(imgFocused));
 			img.setOnMouseExited(e -> img.setImage(imgNotFocused));

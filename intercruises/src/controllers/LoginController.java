@@ -33,6 +33,8 @@ public class LoginController implements Initializable{
 	@FXML
 	private Button loginButton;
 	
+	public static String username;
+	
 	@Override
 	public void initialize(URL location, ResourceBundle resources) {
 		title.setImage(new Image("file:src/img/intercruises.png"));
@@ -50,7 +52,6 @@ public class LoginController implements Initializable{
 		});
 	}
 	
-	
 	@FXML
 	void login() {
 		
@@ -58,7 +59,7 @@ public class LoginController implements Initializable{
 			/*
 			 * Dialogo de contraseña erronea
 			 */
-			Alert alert = new Alert(AlertType.INFORMATION);
+			Alert alert = new Alert(AlertType.WARNING);
 			alert.setTitle("Error");
 			alert.setHeaderText(null);
 			alert.setContentText("El campo usuario y/o contraseña estan vacios");
@@ -74,7 +75,7 @@ public class LoginController implements Initializable{
 				/*
 				 * Dialogo de contraseña erronea
 				 */
-				Alert alert = new Alert(AlertType.INFORMATION);
+				Alert alert = new Alert(AlertType.WARNING);
 				alert.setTitle("Error");
 				alert.setHeaderText(null);
 				alert.setContentText("El usuario y/o contraseña no son correctos");
@@ -84,6 +85,8 @@ public class LoginController implements Initializable{
 				System.out.println("Contraseña erronea");
 			}else {
 				try {
+					username = response.substring(response.indexOf("username\":\"")+11,response.indexOf("\",\"token"));
+					System.out.println("CURRENT USER: "+username);
 					response = response.substring(response.indexOf("token"));
 					response = (String) response.subSequence(8, response.length() - 2);					
 					controllers.MainFrameController.tokenSession = response;
